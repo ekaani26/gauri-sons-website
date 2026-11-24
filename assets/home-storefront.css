@@ -60,7 +60,7 @@
 .storefront [hidden] { display: none; }
 .storefront-photo {
   display: block;
-  padding: clamp(8px, 1.2vw, 14px);
+  padding: clamp(2px, .4vw, 5px);
   background: #fff;
   border-bottom: 1px solid var(--store-border);
 }

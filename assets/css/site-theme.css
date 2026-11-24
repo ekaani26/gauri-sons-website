@@ -222,10 +222,10 @@
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  padding: clamp(8px, 2vw, 18px);
+  padding: clamp(3px, .7vw, 8px);
   background: #fff;
 }
-.site-subpage .subpage-hero .catalog-photo { padding: clamp(12px, 3vw, 24px); }
+.site-subpage .subpage-hero .catalog-photo { padding: clamp(5px, 1vw, 12px); }
 
 /* Shared homepage typography and navigation behavior. */
 html.pg-loaded body, body { font-family: var(--bs-body-font-family); }
