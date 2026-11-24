@@ -55,6 +55,11 @@
 <nav class="navbar navbar-expand-xl bg-white shadow main-navbar site-menu sticky-top" aria-label="Main navigation">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt="Gauri &amp; Sons Group" width="150" height="60"></a>
+    <form class="shop-nav-search" action="products.html" method="get" role="search" aria-label="Search catalogue">
+      <label class="visually-hidden" for="shop-nav-query">Search laboratory products</label>
+      <input id="shop-nav-query" name="q" type="search" placeholder="Search lab products" required maxlength="120">
+      <button type="submit" aria-label="Search"><i class="ri-search-line" aria-hidden="true"></i></button>
+    </form>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
@@ -764,6 +769,10 @@ function updateResults() {
 }
 
 searchBox.hidden = false;
+const initialQuery = (new URLSearchParams(location.search).get('q') || '').trim().slice(0, 120);
+search.value = initialQuery;
+document.getElementById('shop-nav-query').value = initialQuery;
+updateResults();
 search.addEventListener('input', updateResults);
 document.querySelectorAll('a[href^="#"], .product-menu a[href^="products.html#"]').forEach(link => link.addEventListener('click', () => {
   if (search.value) { search.value = ''; updateResults(); }
