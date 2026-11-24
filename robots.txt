@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /_ext/www.google.com/maps/embed/
+
+Sitemap: https://gauriandsons.com/sitemap.xml

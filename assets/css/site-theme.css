@@ -1,0 +1,227 @@
+:root {
+      --clr-p: #438E06;
+      --clr-s: #438E06;
+      --clr-t: #ffffff;
+      --clr-p-rgb: 0,0,0;
+      --clr-s-rgb: 96, 23, 20;
+    }
+/* ===== LUX2 FOOTER ===== */
+      .lux2-footer {
+        background: #ffffff;
+        color: #1a1a1a;
+        text-align: center;
+        padding: 48px 24px 0;
+        margin-bottom: 50px;
+        font-family: inherit;
+      }
+
+      @media screen and (min-width: 800px) {
+        .lux2-footer {
+          margin-bottom: 0;
+        }
+      }
+
+      .lux2-logo-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 18px;
+      }
+
+      .lux2-logo-box {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 10px 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+      }
+
+      .lux2-logo-box img {
+        height: 58px;
+        width: auto;
+        display: block;
+      }
+
+      .lux2-brand-name {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #333333;
+        margin-bottom: 28px;
+      }
+
+      .lux2-rera-box {
+        display: inline-block;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        border-radius: 10px;
+        padding: 16px 28px;
+        margin-bottom: 28px;
+        max-width: 720px;
+        width: 100%;
+      }
+
+      .lux2-rera-heading {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #222222;
+        margin-bottom: 12px;
+      }
+
+      .lux2-rera-heading i {
+        color: #222222;
+        font-size: 15px;
+      }
+
+      .lux2-rera-numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        font-size: 12.5px;
+        color: #444444;
+      }
+
+      .lux2-rera-numbers b {
+        color: #111111;
+      }
+
+      .lux2-rera-val {
+        color: #111111;
+        font-weight: 600;
+      }
+
+      .lux2-rera-pipe {
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 16px;
+      }
+
+      .lux2-disclaimer {
+        max-width: 920px;
+        margin: 0 auto 28px;
+        font-size: 11.5px;
+        line-height: 1.8;
+        color: #444444;
+        text-align: justify;
+      }
+
+      .lux2-disclaimer b {
+        color: #111111;
+      }
+
+      .lux2-separator {
+        width: 100%;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.12);
+        margin-bottom: 0;
+      }
+
+      .lux2-bottom {
+        padding: 18px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .lux2-copyright {
+        font-size: 12.5px;
+        color: #333333;
+      }
+
+      .lux2-copyright b {
+        color: #111111;
+      }
+
+      .lux2-legal {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .lux2-legal a {
+        font-size: 12.5px;
+        color: #333333;
+        text-decoration: none;
+        transition: color 0.25s;
+      }
+
+      .lux2-legal a:hover {
+        color: #000000;
+      }
+
+      .lux2-legal span {
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 14px;
+      }
+
+      /* ===== END LUX2 FOOTER ===== */
+
+
+/* Shared navigation and secondary page presentation */
+.main-navbar.site-menu { height: auto; min-height: var(--nav-height); }
+.site-menu .nav-link { white-space: nowrap; padding-inline: clamp(.35rem, 1vw, 1rem); }
+.site-menu .navbar-nav { gap: .3rem; }
+.site-menu .navbar-collapse { min-width: 0; }
+.site-menu .logo { width: clamp(120px, 12vw, 160px); min-width: 0; margin-right: 0; }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .site-menu .nav-link { font-size: .82rem; padding-inline: .35rem; }
+}
+@media (max-width: 1199.98px) {
+  .site-menu .navbar-nav { align-items: stretch; padding-block: .6rem; }
+  .site-menu .nav-link { justify-content: flex-start; }
+}
+.site-subpage { color: #1a1a1a; }
+.site-subpage main a:not(.btn):not(.nav-link):not(.navbar-brand) { color: #285a08; }
+
+.site-subpage .subpage-hero, .site-subpage main section {
+  background: #fff;
+  border: 1px solid #dfe5df;
+  border-radius: 0 30px 0 30px;
+}
+.site-subpage .subpage-hero { padding: clamp(1rem, 3vw, 2.5rem); }
+.site-subpage .subpage-hero h1::after, .site-subpage main .section-heading::after {
+  content: ""; width: 3rem; height: 3px; background: var(--clr-p);
+  display: block; margin-top: .65rem; border-radius: 3px;
+}
+.site-subpage .subpage-hero img { border-radius: 0 28px 0 28px !important; }
+.site-subpage main section p { text-align: start; }
+.site-subpage main .section-heading { margin-bottom: 1rem; }
+.site-subpage main .section-heading::before { display: none; }
+.site-subpage .state-card { border-color: #d2dbcd !important; border-radius: 0 22px 0 22px !important; }
+.site-subpage .state-card:is(:hover, :focus-visible) { border-color: var(--clr-p) !important; }
+.site-subpage .state-card .text-body { margin-top: .25rem; }
+.site-subpage .table thead th { background: #eef5ea; }
+.site-subpage details summary { color: #285a08; }
+.site-subpage .price-block { min-width: 0; border-radius: 0 24px 0 24px; }
+.site-subpage .price-block h3 { overflow-wrap: anywhere; }
+.site-subpage .catalog-section { scroll-margin-top: calc(var(--nav-height, 72px) + 1rem); }
+#about-gauri .section-heading { display: block; text-align: center; }
+@media (min-width: 800px) { #about-gauri .section-heading { display: inline-block; text-align: unset; } }
+.lp-layout #site-visit, .lp-layout #product-range { scroll-margin-top: calc(var(--nav-height) + 1rem); }
+
+/* Product navigation and catalogue detail pages */
+.main-navbar.site-menu { overflow: visible; }
+.site-menu .product-menu .dropdown-menu { max-height: min(70vh, 27rem); overflow-y: auto; }
+.site-menu .product-menu .nav-link { width: 100%; }
+.site-menu .product-menu .dropdown-item { padding-block: .45rem; }
+.site-menu .navbar-collapse.show { max-height: calc(100dvh - var(--nav-height)); overflow-y: auto; }
+@media (max-width: 1199.98px) {
+  .site-menu .product-menu .dropdown-menu { max-height: none; }
+}
+.catalog-product h3 a, .catalog-details { text-underline-offset: .2em; }
+.catalog-product h3 a:not(:hover):not(:focus-visible) { text-decoration: none; }
+.product-detail .catalog-photo { object-fit: contain; }
+
+/* Shared homepage typography and navigation behavior. */
+html.pg-loaded body, body { font-family: var(--bs-body-font-family); }
+.site-menu .dropdown-item { font-family: inherit; }
+.site-menu .navbar-collapse { overflow: visible; }
+@media (min-width: 1200px) { .site-menu .navbar-collapse.show { overflow: visible; max-height: none; } }
+.catalog-section { scroll-margin-top: calc(var(--nav-height) + 2rem); }
