@@ -217,7 +217,15 @@
 }
 .catalog-product h3 a, .catalog-details { text-underline-offset: .2em; }
 .catalog-product h3 a:not(:hover):not(:focus-visible) { text-decoration: none; }
-.product-detail .catalog-photo { object-fit: contain; }
+.site-subpage .catalog-photo {
+  box-sizing: border-box;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  padding: clamp(8px, 2vw, 18px);
+  background: #fff;
+}
+.site-subpage .subpage-hero .catalog-photo { padding: clamp(12px, 3vw, 24px); }
 
 /* Shared homepage typography and navigation behavior. */
 html.pg-loaded body, body { font-family: var(--bs-body-font-family); }

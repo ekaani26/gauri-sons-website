@@ -60,15 +60,17 @@
 .storefront [hidden] { display: none; }
 .storefront-photo {
   display: block;
-  padding: 8px;
+  padding: clamp(8px, 1.2vw, 14px);
+  background: #fff;
   border-bottom: 1px solid var(--store-border);
 }
 .storefront-photo img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1;
   object-fit: contain;
+  object-position: center;
 }
 .storefront-details {
   display: flex;
