@@ -462,3 +462,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 
+
+
+/* Route enquiry forms to the business email, preserving existing layout. */
+document.addEventListener('submit', function(event) {
+  const form = event.target;
+  if (!(form instanceof HTMLFormElement) || !form.matches('.leadForm, .enq-form')) return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  if (form.dataset.emailSubmitting === '1') return;
+  if (!form.reportValidity()) return;
+  const data = new FormData(form);
+  data.set('_subject', 'Gauri & Sons website enquiry');
+  data.set('_template', 'table');
+  data.set('Page', location.href);
+  const product = typeof selectedCatalogProduct !== 'undefined' ? selectedCatalogProduct : '';
+  if (product) data.set('Product', product);
+  form.dataset.emailSubmitting = '1';
+  const button = form.querySelector('[type="submit"]');
+  if (button) button.disabled = true;
+  fetch('https://formsubmit.co/ajax/gouriandsonsllp@gmail.com', {
+    method: 'POST', headers: {Accept: 'application/json'}, body: data
+  }).then(async response => {
+    const result = await response.json();
+    if (!response.ok || String(result.success) !== 'true') throw new Error('Submission not confirmed');
+    alert('Thank you. Your enquiry has been submitted.');
+    form.reset();
+  }).catch(() => alert('Unable to submit your enquiry. Please try again or contact us directly.'))
+    .finally(() => { delete form.dataset.emailSubmitting; if (button) button.disabled = false; });
+}, true);
