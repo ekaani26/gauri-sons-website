@@ -482,12 +482,12 @@ document.addEventListener('submit', function(event) {
   const button = form.querySelector('[type="submit"]');
   if (button) button.disabled = true;
   fetch('https://formsubmit.co/ajax/gouriandsonsllp@gmail.com', {
-    method: 'POST', headers: {Accept: 'application/json'}, body: data
+    method: 'POST', headers: {Accept: 'application/json', 'Content-Type': 'application/json'}, body: JSON.stringify(Object.fromEntries(data.entries()))
   }).then(async response => {
     const result = await response.json();
-    if (!response.ok || String(result.success) !== 'true') throw new Error('Submission not confirmed');
+    if (!response.ok || String(result.success) !== 'true') throw new Error(result.message || 'Submission not confirmed');
     alert('Thank you. Your enquiry has been submitted.');
     form.reset();
-  }).catch(() => alert('Unable to submit your enquiry. Please try again or contact us directly.'))
+  }).catch(error => { console.error('Enquiry delivery:', error); alert('Unable to submit your enquiry. ' + (error.message || 'Please try again or contact us directly.')); })
     .finally(() => { delete form.dataset.emailSubmitting; if (button) button.disabled = false; });
 }, true);
