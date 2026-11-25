@@ -16,9 +16,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <!-- Favicon -->
   <link href="img/favicon.png" rel="icon" sizes="16x16">
-  <!-- Preload Banner Image -->
-  <link as="image" href="img/webp/o1-mobile.webp" media="(max-width: 750px)" rel="preload">
-  <link as="image" href="img/webp/o1.webp" media="(min-width: 751px)" rel="preload">
+  <link rel="preload" as="image" href="img/webp/laboratory-blueprint.webp">
 
   <script>
 
@@ -295,7 +293,7 @@
 <meta property="og:description" content="Gauri &amp; Sons Group - laboratory equipment, glassware and lab essentials for schools, colleges, research labs and industry. Get best price.">
 <meta property="og:url" content="https://gauriandsons.com/">
 <meta property="og:site_name" content="Gauri &amp; Sons Group">
-<meta property="og:image" content="https://gauriandsons.com/img/webp/o1.webp">
+<meta property="og:image" content="https://gauriandsons.com/img/webp/laboratory-blueprint.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -322,6 +320,7 @@
 }
 </script>
   <link rel="stylesheet" href="assets/home-storefront.css">
+  <link rel="stylesheet" href="assets/css/gauri-home.css">
   <script src="assets/home-storefront.js" defer></script>
 <script type="application/ld+json">
 {
@@ -461,11 +460,17 @@
 </script>
 </head>
 
-<body>
+<body class="gauri-home">
   <div class="lp-layout">
+    <div class="gauri-utility">
+      <div class="gauri-wrap">
+        <span>Laboratory supplies for institutions and industry</span>
+        <a href="tel:+918826750844"><i class="ri-phone-line" aria-hidden="true"></i> +91 88267 50844</a>
+      </div>
+    </div>
     <!-- Menu - S -->
     <nav class="navbar navbar-expand-xl bg-white shadow main-navbar site-menu sticky-top" aria-label="Main navigation">
-  <div class="container-fluid">
+  <div class="container-fluid gauri-wrap">
     <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt="Gauri &amp; Sons Group" width="150" height="60"></a>
     <form class="shop-nav-search" action="products.html" method="get" role="search" aria-label="Search catalogue">
       <label class="visually-hidden" for="shop-nav-query">Search laboratory products</label>
@@ -488,112 +493,25 @@
         <li class="nav-item"><a class="nav-link" href="index.html#amenities"><i class="ri-grid-line" aria-hidden="true"></i> Categories</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#gallery"><i class="ri-image-line" aria-hidden="true"></i> Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#product-range"><i class="ri-list-check" aria-hidden="true"></i> Product Range</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#site-visit"><i class="ri-chat-3-line" aria-hidden="true"></i> Get Quote</a></li>
+        <li class="nav-item"><a class="nav-link gauri-nav-quote" href="index.html#site-visit"><i class="ri-chat-3-line" aria-hidden="true"></i> Get Quote</a></li>
       </ul>
     </div>
   </div>
 </nav> <!-- Menu - E -->
-    <style>
-      .ani-bounce {
-        animation: bounce 0.6s infinite;
-        transition: transform 0.2s;
-      }
-
-      @keyframes bounce {
-        0% {
-          transform: translateY(0);
-        }
-
-        30% {
-          transform: translateY(-10px);
-        }
-
-        50% {
-          transform: translateY(0);
-        }
-
-        70% {
-          transform: translateY(-5px);
-        }
-
-        100% {
-          transform: translateY(0);
-        }
-      }
-    </style>
-    <!-- Banner Slider - S -->
-    <section class="banner" id="home">
-      <!-- Banner Slider -->
-      <div class="glide" id="mainSlider">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <picture>
-                <source data-srcset="./img/webp/o1-mobile.webp" media="(max-width: 750px)" type="image/webp">
-                <source data-srcset="./img/webp/o1.webp" media="(min-width: 751px)" type="image/webp">
-                <img alt="Borosilicate glassware on a laboratory bench" class="lazyload" data-sizes="auto" data-srcset="./img/webp/o1.webp" src="img/ip.png">
-              </picture>
-            </li>
-            <li class="glide__slide">
-              <picture>
-                <source data-srcset="./img/webp/o2-mobile.webp" media="(max-width: 750px)" type="image/webp">
-                <source data-srcset="./img/webp/o2.webp" media="(min-width: 751px)" type="image/webp">
-                <img alt="Graduated cylinders, beakers and flasks" class="lazyload" data-sizes="auto" data-srcset="./img/webp/o2.webp" src="img/ip.png">
-              </picture>
-            </li>
-            <li class="glide__slide">
-              <picture>
-                <source data-srcset="./img/webp/slider1-mobile.webp" media="(max-width: 750px)" type="image/webp">
-                <source data-srcset="./img/webp/slider1.webp" media="(min-width: 751px)" type="image/webp">
-                <img alt="Laboratory hotplate and benchtop centrifuge" class="lazyload" data-sizes="auto" data-srcset="./img/webp/slider1.webp" src="img/ip.png">
-              </picture>
-            </li>
-            <li class="glide__slide">
-              <picture>
-                <source data-srcset="./img/webp/slider2-mobile.webp" media="(max-width: 750px)" type="image/webp">
-                <source data-srcset="./img/webp/slider2.webp" media="(min-width: 751px)" type="image/webp">
-                <img alt="Laboratory test tubes and a micropipette" class="lazyload" data-sizes="auto" data-srcset="./img/webp/slider2.webp" src="img/ip.png">
-              </picture>
-            </li>
-            <li class="glide__slide">
-              <picture>
-                <source data-srcset="./img/webp/slider3-mobile.webp" media="(max-width: 750px)" type="image/webp">
-                <source data-srcset="./img/webp/slider3.webp" media="(min-width: 751px)" type="image/webp">
-                <img alt="Laboratory safety goggles, gloves and sample tubes" class="lazyload" data-sizes="auto" data-srcset="./img/webp/slider3.webp" src="img/ip.png">
-              </picture>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="info-box">
-        <span class="status">LABORATORY SUPPLIES</span>
-        <div class="mb-box">
-          <h1>
-            Gauri &amp; Sons
-          </h1>
-          <h2>
-            <script>document.write(projectLocation);</script>
-          </h2>
-          <div class="card-d card-d-custom p-2 text-center">
-            <p style="margin-bottom: 0px;font-size: 16px;font-weight: 400;">
-              <script>document.write(headingMainPoint);</script>
-            </p>
+    <section class="gauri-hero" id="home" aria-labelledby="home-title">
+      <div class="gauri-wrap gauri-hero-grid">
+        <div class="gauri-hero-copy">
+          <p class="gauri-kicker">Gauri &amp; Sons Group</p>
+          <h1 id="home-title">Equip your laboratory with confidence.</h1>
+          <p>Glassware, instruments and everyday essentials for schools, research labs, hospitals and industry.</p>
+          <div class="gauri-actions">
+            <a class="gauri-button" href="products.html">Explore catalogue <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+            <a class="gauri-button gauri-button-outline" href="#site-visit">Request a quote</a>
           </div>
-          <ul class="offers" id="offersList"></ul>
         </div>
-        <div class="mb-ext-box">
-          <h4>
-            <script>document.write(projectType);</script>
-          </h4>
-          <h2 style="font-size: 25px;">Laboratory products</h2>
-          <h5>
-            <script>document.write(startingPrice);</script>
-          </h5>
-          <a class="btn btn-dark btn-cta" href="#shop-products">Shop Products</a>
-        </div>
+        <img class="gauri-hero-art" src="img/webp/laboratory-blueprint.webp" width="1080" height="760" alt="" fetchpriority="high">
       </div>
     </section>
-    <!-- Banner Slider - E -->
     <!-- Sidebar - S -->
     <sidebar class="shadow">
       <div class="og-wrapper">
@@ -732,7 +650,39 @@
     <!-- Sidebar - E -->
 
 
-    <main>
+    <main id="main-content">
+      <section id="amenities" class="gauri-category-band" aria-labelledby="category-title">
+        <div class="gauri-wrap">
+          <h2 id="category-title">Explore by category</h2>
+          <div class="gauri-category-grid">
+          <a href="products.html#glassware"><i class="ri-flask-line" aria-hidden="true"></i> Glassware</a>
+          <a href="products.html#equipment"><i class="ri-dashboard-3-line" aria-hidden="true"></i> Lab equipment</a>
+          <a href="products.html#optics"><i class="ri-focus-3-line" aria-hidden="true"></i> Microscopy</a>
+          <a href="products.html#consumables"><i class="ri-drop-line" aria-hidden="true"></i> Consumables</a>
+          <a href="products.html#cryogenic"><i class="ri-snowflake-line" aria-hidden="true"></i> Cryogenic storage</a>
+          <a href="products.html#safety"><i class="ri-shield-check-line" aria-hidden="true"></i> Lab safety</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="gauri-wrap gauri-feature-grid" aria-label="Catalogue and institutional enquiries">
+        <article class="gauri-feature gauri-feature-catalogue">
+          <div>
+            <h2>Find the right equipment</h2>
+            <p>Browse product specifications and configurations, from beakers and flasks to centrifuges and microscopes.</p>
+            <a class="gauri-text-link" href="products.html">Browse all products <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+          </div>
+          <i class="ri-flask-line gauri-feature-icon" aria-hidden="true"></i>
+        </article>
+        <article class="gauri-feature gauri-feature-bulk">
+          <div>
+            <h2>Buying for an institution?</h2>
+            <p>Share your list and quantities for a quote tailored to your laboratory, campus or facility.</p>
+            <a class="gauri-text-link" href="#site-visit">Get a bulk quote <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+          </div>
+          <i class="ri-file-list-3-line gauri-feature-icon" aria-hidden="true"></i>
+        </article>
+      </section>
 
       <section id="shop-products" class="storefront" aria-labelledby="storefront-title">
         <div class="storefront-heading">
@@ -1129,90 +1079,6 @@
       </section>
       <!-- Site Plan - E -->
       <!-- Amenities - S -->
-      <section id="amenities">
-        <div class="row">
-          <div class="col">
-            <h3 class="section-heading text-center w-100">
-              Product Categories </h3>
-            <div class="slider-container">
-              <div class="glide amenities-slider mt-3">
-                <div class="glide__track" data-glide-el="track">
-                  <ul class="glide__slides">
-                    <li class="glide__slide">
-                      <div class="amenities-block-wrapper"><a class="gallery-img glightbox" data-gallery="ami-img" data-glightbox="title:Lab Glassware" href="amenities/club-house.jpg">
-                          <picture>
-                            <source data-srcset="./amenities/club-house.jpg" type="image/jpeg">
-                            <img alt="Lab Glassware" class="lazyload" data-sizes="auto" data-srcset="./amenities/club-house.jpg" src="img/ip.png">
-                          </picture><span class="amenity-name">Lab Glassware</span>
-                        </a></div>
-                    </li>
-                    <li class="glide__slide">
-                      <div class="amenities-block-wrapper"><a class="gallery-img glightbox" data-gallery="ami-img" data-glightbox="title:Beakers &amp; Flasks" href="amenities/gym.jpg">
-                          <picture>
-                            <source data-srcset="./amenities/gym.jpg" type="image/jpeg">
-                            <img alt="Beakers &amp; Flasks" class="lazyload" data-sizes="auto" data-srcset="./amenities/gym.jpg" src="img/ip.png">
-                          </picture><span class="amenity-name">Beakers &amp; Flasks</span>
-                        </a></div>
-                    </li>
-                    <li class="glide__slide">
-                      <div class="amenities-block-wrapper"><a class="gallery-img glightbox" data-gallery="ami-img" data-glightbox="title:Test Tubes &amp; Pipettes" href="amenities/kids-play-area.jpg">
-                          <picture>
-                            <source data-srcset="./amenities/kids-play-area.jpg" type="image/jpeg">
-                            <img alt="Test Tubes &amp; Pipettes" class="lazyload" data-sizes="auto" data-srcset="./amenities/kids-play-area.jpg" src="img/ip.png">
-                          </picture><span class="amenity-name">Test Tubes &amp; Pipettes</span>
-                        </a></div>
-                    </li>
-                    <li class="glide__slide">
-                      <div class="amenities-block-wrapper"><a class="gallery-img glightbox" data-gallery="ami-img" data-glightbox="title:Lab Equipment" href="amenities/multipurpose-hall.jpg">
-                          <picture>
-                            <source data-srcset="./amenities/multipurpose-hall.jpg" type="image/jpeg">
-                            <img alt="Lab Equipment" class="lazyload" data-sizes="auto" data-srcset="./amenities/multipurpose-hall.jpg" src="img/ip.png">
-                          </picture><span class="amenity-name">Lab Equipment</span>
-                        </a></div>
-                    </li>
-                    <li class="glide__slide">
-                      <div class="amenities-block-wrapper"><a class="gallery-img glightbox" data-gallery="ami-img" data-glightbox="title:Heating &amp; Stirring" href="amenities/park.jpg">
-                          <picture>
-                            <source data-srcset="./amenities/park.jpg" type="image/jpeg">
-                            <img alt="Heating &amp; Stirring" class="lazyload" data-sizes="auto" data-srcset="./amenities/park.jpg" src="img/ip.png">
-                          </picture><span class="amenity-name">Heating &amp; Stirring</span>
-                        </a></div>
-                    </li>
-                    <li class="glide__slide">
-                      <div class="amenities-block-wrapper"><a class="gallery-img glightbox" data-gallery="ami-img" data-glightbox="title:Microscopes &amp; Optics" href="amenities/security.jpg">
-                          <picture>
-                            <source data-srcset="./amenities/security.jpg" type="image/jpeg">
-                            <img alt="Microscopes &amp; Optics" class="lazyload" data-sizes="auto" data-srcset="./amenities/security.jpg" src="img/ip.png">
-                          </picture><span class="amenity-name">Microscopes &amp; Optics</span>
-                        </a></div>
-                    </li>
-                    <li class="glide__slide">
-                      <div class="amenities-block-wrapper"><a class="gallery-img glightbox" data-gallery="ami-img" data-glightbox="title:Consumables" href="amenities/sport-court.jpg">
-                          <picture>
-                            <source data-srcset="./amenities/sport-court.jpg" type="image/jpeg">
-                            <img alt="Consumables" class="lazyload" data-sizes="auto" data-srcset="./amenities/sport-court.jpg" src="img/ip.png">
-                          </picture><span class="amenity-name">Consumables</span>
-                        </a></div>
-                    </li>
-                    <li class="glide__slide">
-                      <div class="amenities-block-wrapper"><a class="gallery-img glightbox" data-gallery="ami-img" data-glightbox="title:Safety Essentials" href="amenities/swimming-pool.jpg">
-                          <picture>
-                            <source data-srcset="./amenities/swimming-pool.jpg" type="image/jpeg">
-                            <img alt="Safety Essentials" class="lazyload" data-sizes="auto" data-srcset="./amenities/swimming-pool.jpg" src="img/ip.png">
-                          </picture><span class="amenity-name">Safety Essentials</span>
-                        </a></div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="glide__arrows" data-glide-el="controls">
-                  <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;"><i class="ri-arrow-left-s-line"></i></button>
-                  <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;"><i class="ri-arrow-right-s-line"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- Amenities - E -->
       <!-- Gallery - S -->
       <section class="oo-tabs pg-tabs" id="gallery">
@@ -1447,7 +1313,7 @@
       </a>
     </div>
     <!-- Mobile Footer CTA - E --> <!-- Enquire Popup - S -->
-    <div aria-hidden="true" aria-labelledby="enqPopupLabel" class="modal fade enqPopup" id="enqPopup" tabindex="-1">
+    <div aria-hidden="true" aria-labelledby="enqPopupTitle" class="modal fade enqPopup" id="enqPopup" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header border-0 pb-0">
@@ -1634,32 +1500,22 @@
     <!--side btn code end-->
     <!-- Footer - S -->
     <footer class="lux2-footer">
-
-      <!-- Logo -->
-      <!-- <div class="lux2-logo-wrap">
-        <div class="lux2-logo-box">
-          <img alt="logo" class="lazyload" data-src="./img/logo.png" src="img/ip.png" />
+      <div class="gauri-wrap gauri-footer-grid">
+        <div>
+          <strong>Gauri &amp; Sons Group</strong>
+          <p>Laboratory equipment and supplies</p>
         </div>
-      </div> -->
-
-      <!-- Brand Name -->
-
-
-      <!-- RERA Box -->
-      <div class="lux2-rera-box">
-        <div class="lux2-rera-heading">
-          <i class="ri-shield-check-fill"></i>&nbsp; AUTHORISED LAB EQUIPMENT SUPPLIER
+        <div>
+          <h2>Explore</h2>
+          <a href="products.html">Product catalogue</a>
+          <a href="states.html">State guides</a>
+          <a href="#about-gauri">About us</a>
         </div>
-        <div class="lux2-rera-numbers">
-          <span><b>GST Number</b> : <span class="lux2-rera-val">
-              To be added
-            </span></span>
-          <span class="lux2-rera-pipe">|</span>
-          <span><b>Email</b> : <span class="lux2-rera-val">
-              <a href="mailto:info@gauriandsons.com">info@gauriandsons.com</a>
-            </span></span>
-          <span class="lux2-rera-pipe">|</span>
-          <span><b>Phone</b> : <a class="lux2-rera-val" href="tel:+918826750844">+91 8826750844</a></span>
+        <div>
+          <h2>Get in touch</h2>
+          <a href="mailto:info@gauriandsons.com">info@gauriandsons.com</a>
+          <a href="tel:+918826750844">+91 88267 50844</a>
+          <a href="#site-visit">Request a quote</a>
         </div>
       </div>
 
@@ -1714,25 +1570,8 @@
     let galSliders = [];
     let isThanksPage = false;
   </script>
-  <script>
-    window.addEventListener("load", (event) => {
-      setTimeout(() => {
-        var enqPopup = new bootstrap.Modal(document.getElementById('enqPopup'));
-        enqPopup.show();
-      }, 3000);
-    });
-  </script>
-  <!-- my script -->
-  <script>
-    const offersList = document.getElementById("offersList");
 
-    offers.forEach((offer) => {
-      const li = document.createElement("li");
-      li.className = "offer-item";
-      li.innerHTML = `<span class="offer-text">${offer}</span>`;
-      offersList.appendChild(li);
-    });
-  </script>
+
 
 
 

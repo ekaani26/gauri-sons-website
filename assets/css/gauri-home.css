@@ -1,0 +1,144 @@
+.gauri-home {
+  --gauri-ink: #142c44;
+  --gauri-navy: #0a1c30;
+  --gauri-blue: #123456;
+  --gauri-orange: #f7b77c;
+  --gauri-muted: #465b70;
+  --gauri-font: "Inter", "Segoe UI", system-ui, sans-serif;
+  --bs-body-font-family: var(--gauri-font);
+  color: var(--gauri-ink);
+}
+.gauri-home .lp-layout { display: block; padding: 0; }
+.gauri-home .lp-layout > sidebar { display: none; }
+.gauri-wrap { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
+.gauri-utility { background: var(--gauri-navy); color: #e5edf5; font-size: .78rem; }
+.gauri-utility .gauri-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 34px;
+  gap: 12px;
+}
+.gauri-utility a { color: inherit; white-space: nowrap; }
+.gauri-home .lp-layout > .site-menu { position: sticky; top: 0; z-index: 1020; }
+.gauri-home .site-menu .container-fluid { width: min(1200px, calc(100% - 64px)); padding-inline: 0; }
+.gauri-home .site-menu .gauri-nav-quote { color: #fff; background: var(--gauri-blue); border-radius: 6px; }
+.gauri-home .site-menu .gauri-nav-quote:is(:hover,:focus-visible) { color: #fff; background: #24537b; }
+.gauri-home .shop-nav-search button { background: var(--gauri-blue); }
+.gauri-home :where(a, button, input, select, summary):focus-visible { outline: 2px solid #3479a4; outline-offset: 3px; }
+
+.gauri-hero { background: var(--gauri-navy); color: #fff; }
+.gauri-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+  gap: clamp(16px, 4vw, 68px);
+  align-items: center;
+  padding-block: clamp(35px, 5.2vw, 82px);
+}
+.gauri-kicker {
+  margin: 0 0 14px;
+  color: var(--gauri-orange);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.gauri-hero h1 {
+  max-width: 12ch;
+  margin: 0 0 16px;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(38px, 5.3vw, 79px);
+  font-weight: 720;
+  line-height: 1.02;
+  letter-spacing: -.055em;
+}
+.gauri-hero-copy > p:not(.gauri-kicker) { max-width: 43ch; color: #d2deeb; font-size: clamp(15px, 1.45vw, 19px); }
+.gauri-hero-art { width: 100%; height: auto; display: block; border: 1px solid #31506b; border-radius: 13px; }
+.gauri-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+.gauri-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 10px 16px;
+  background: var(--gauri-orange);
+  color: #172535;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+}
+.gauri-button:hover { background: #ffce9f; color: #172535; }
+.gauri-button-outline { border-color: #8ba1b7; background: transparent; color: #fff; }
+.gauri-button-outline:hover { background: #203e5a; color: #fff; }
+
+.gauri-home main section { scroll-margin-top: calc(var(--nav-height) + 16px); }
+.gauri-home main > section:not(.gauri-category-band) { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
+.gauri-home main > section:not(.gauri-category-band, .storefront, .gauri-feature-grid) { padding: clamp(22px, 4vw, 52px); }
+.gauri-home main :is(h2, h3.section-heading) {
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+.gauri-home main h3.section-heading::before { display: none; }
+.gauri-category-band { background: #eef3f7; padding: clamp(27px, 4vw, 51px) 0; }
+.gauri-category-band h2 { text-align: center; margin: 0 0 21px; font-size: clamp(24px, 3vw, 33px); }
+.gauri-category-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.gauri-category-grid a {
+  display: flex;
+  min-height: 85px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid #e2e9ef;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--gauri-ink);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .86rem;
+}
+.gauri-category-grid a:hover { border-color: #6c94b4; }
+.gauri-category-grid i { font-size: 24px; color: #2a648a; }
+.gauri-feature-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; padding: 0; margin-block: clamp(30px, 5vw, 65px); }
+.gauri-feature { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: clamp(20px, 3vw, 38px); border-radius: 10px; }
+.gauri-feature-catalogue { background: #e3f2f5; }
+.gauri-feature-bulk { background: #f9eee4; }
+.gauri-feature h2 { font-size: clamp(23px, 2.5vw, 34px); }
+.gauri-feature p { color: var(--gauri-muted); line-height: 1.6; }
+.gauri-feature-icon { color: #377182; font-size: clamp(30px, 5vw, 72px); }
+.gauri-feature-bulk .gauri-feature-icon { color: #985521; }
+.gauri-text-link { color: var(--gauri-blue); font-weight: 700; text-underline-offset: 4px; }
+.gauri-home .storefront { --store-accent: #235574; --store-ink: var(--gauri-ink); background: #f2f6f9; border-radius: 10px; }
+.gauri-home .storefront-card { border-radius: 8px; }
+.gauri-home .storefront-quote:hover { color: #fff; background: var(--gauri-blue); }
+.gauri-home #site-visit { background: #eaf1f7; border-radius: 10px; margin-bottom: clamp(32px, 5vw, 65px); }
+.gauri-home .lux2-footer { background: var(--gauri-blue); color: #e0ebf3; padding: 38px 0 0; text-align: left; }
+.gauri-footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 20px; padding-bottom: 22px; }
+.gauri-footer-grid h2, .gauri-footer-grid strong { color: #fff; font-size: 1.05rem; }
+.gauri-footer-grid p { margin-top: 7px; }
+.gauri-footer-grid a { display: block; width: fit-content; padding-block: 5px; color: inherit; text-underline-offset: 3px; }
+.gauri-home .lux2-footer :is(.lux2-disclaimer, .lux2-bottom, .lux2-separator) { width: min(1200px, calc(100% - 64px)); margin-inline: auto; color: inherit; }
+.gauri-home .lux2-footer :is(.lux2-copyright, .lux2-legal a, .lux2-legal span) { color: inherit; }
+.gauri-home .lux2-footer .lux2-separator { background: #67839e; }
+@media (max-width: 800px) {
+  .gauri-wrap,
+  .gauri-home .site-menu .container-fluid,
+  .gauri-home main > section:not(.gauri-category-band),
+  .gauri-home .lux2-footer :is(.lux2-disclaimer, .lux2-bottom, .lux2-separator) { width: calc(100% - 32px); }
+  .gauri-category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 575px) {
+  .gauri-utility .gauri-wrap { justify-content: end; }
+  .gauri-utility span { display: none; }
+  .gauri-hero-grid, .gauri-feature-grid { grid-template-columns: minmax(0, 1fr); }
+  .gauri-hero-grid { padding-block: 30px 19px; gap: 22px; }
+  .gauri-hero-art { aspect-ratio: 1.75; object-fit: cover; }
+  .gauri-footer-grid { grid-template-columns: 1fr; }
+}
