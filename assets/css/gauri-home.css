@@ -153,3 +153,130 @@
   }
   .gauri-home .mob-ft-cta a:not(:first-child) { border-left: 1px solid #637e98; }
 }
+
+/* Compact navigation and the illustrated catalogue sections. */
+.gauri-home {
+  --gauri-blue: #164976;
+  --gauri-orange: #f8be84;
+  --gauri-font: "Segoe UI", system-ui, sans-serif;
+  --clr-p: #17517c;
+  --clr-s: #154670;
+}
+.gauri-utility { background: #262b30; }
+.gauri-utility .gauri-wrap { min-height: 27px; }
+.gauri-header-quote {
+  display: none;
+  color: #fff;
+  background: #a84517;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 650;
+  text-decoration: none;
+}
+.gauri-header-quote:hover { background: #82340e; color: #fff; }
+.gauri-service-strip { color: #fff; background: #174773; font-size: .8rem; }
+.gauri-service-strip .gauri-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 9px;
+  min-height: 35px;
+}
+.gauri-service-strip a { color: inherit; text-underline-offset: 3px; }
+.gauri-hero { background: #0a1221; }
+.gauri-hero-grid { grid-template-columns: minmax(0, 1.03fr) minmax(0, 1fr); gap: 0; padding-block: 0; }
+.gauri-hero-copy { align-self: center; padding-block: clamp(26px, 4vw, 53px); }
+.gauri-hero h1 { font-size: clamp(34px, 4vw, 59px); line-height: 1.08; max-width: 19ch; letter-spacing: -.045em; }
+.gauri-hero h1 span { display: block; color: var(--gauri-orange); }
+.gauri-hero-art { border: 0; border-radius: 0; mask-image: linear-gradient(to right, transparent, black 12%, black 90%, transparent); }
+.gauri-hero-shortcuts { display: flex; flex-wrap: wrap; list-style: none; margin: 20px 0 0; padding: 0; gap: 7px; }
+.gauri-hero-shortcuts a {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 6px 9px;
+  color: #e0edf7;
+  font-size: .8rem;
+  border: 1px solid #385066;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.gauri-hero-shortcuts a:hover { border-color: var(--gauri-orange); }
+.gauri-hero-shortcuts i { color: var(--gauri-orange); }
+.gauri-category-band { background: #f1f3f5; }
+.gauri-category-grid a { min-height: 65px; }
+.gauri-audience { display: grid; gap: 12px; max-width: 1000px; margin: clamp(20px, 3vw, 36px) auto 0; }
+.gauri-audience article {
+  display: flex;
+  align-items: center;
+  width: 86%;
+  padding: 16px clamp(16px, 3vw, 36px);
+  gap: clamp(12px, 3vw, 32px);
+  border: 1px solid #e6ebf0;
+  border-radius: 8px;
+  background: #fff;
+}
+.gauri-audience article:nth-child(even) { margin-left: auto; flex-direction: row-reverse; }
+.gauri-audience img { width: clamp(78px, 14vw, 170px); height: auto; }
+.gauri-audience h3, .gauri-steps h3 { font-size: 1.12rem; font-weight: 700; }
+.gauri-audience p, .gauri-steps p, .gauri-finder p { color: var(--gauri-muted); margin-bottom: 8px; }
+.gauri-audience a, .gauri-finder article a { color: #1d4e78; font-weight: 650; text-underline-offset: 3px; }
+.gauri-feature-grid { margin-bottom: 0; }
+.gauri-feature-art { width: clamp(64px, 12vw, 160px); height: auto; }
+.gauri-home main > section.gauri-workflow { text-align: center; padding-inline: 0; }
+.gauri-workflow h2 { margin-bottom: 24px; }
+.gauri-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.gauri-steps article { padding: 8px 13px; }
+.gauri-steps i, .gauri-finder article i {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  color: #15466f;
+  background: #e9f1f7;
+  font-size: 24px;
+}
+.gauri-home main > section:is(.gauri-finder-band,.gauri-contact-band) { width: 100%; padding: clamp(26px, 4vw, 53px) 0; }
+.gauri-finder-band { background: #f1f3f5; margin-bottom: clamp(24px, 5vw, 60px); }
+.gauri-finder { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.gauri-finder > * { padding: clamp(17px, 2.8vw, 32px); border-radius: 8px; background: white; }
+.gauri-finder h2 { font-size: 1.26rem; }
+.gauri-finder article i { margin-left: 0; }
+.gauri-finder form { display: flex; flex-direction: column; gap: 9px; background: #984520; color: #fff; }
+.gauri-finder form h2 { margin-bottom: 3px; }
+.gauri-finder select, .gauri-finder button { min-height: 42px; border: 0; border-radius: 4px; }
+.gauri-finder select { padding: 4px 8px; }
+.gauri-finder button { align-self: start; padding: 6px 11px; background: #143857; color: #fff; font-weight: 650; }
+.gauri-contact-band { background: #e8f0f7; }
+.gauri-contact-band .gauri-wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.gauri-contact-band p { margin-bottom: 0; }
+.gauri-contact-band .gauri-button { background: var(--gauri-blue); color: white; }
+
+@media (min-width: 1200px) {
+  .gauri-home { --nav-height: 96px; }
+  .gauri-home .site-menu .container-fluid { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0 24px; }
+  .gauri-home .shop-nav-search { width: 100%; max-width: 380px; justify-self: end; }
+  .gauri-header-quote { display: inline-flex; align-items: center; }
+  .gauri-home .site-menu .navbar-collapse { grid-column: 1 / -1; border-top: 1px solid #e8edf1; }
+  .gauri-home .site-menu .navbar-nav { gap: 14px; }
+  .gauri-home .site-menu .gauri-nav-quote { display: none; }
+}
+@media (max-width: 800px) {
+  .gauri-audience article { width: 100%; }
+  .gauri-home main > section:is(.gauri-finder-band,.gauri-contact-band) { width: 100%; }
+}
+@media (max-width: 575px) {
+  .gauri-hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .gauri-hero-copy { padding-block: 25px 9px; }
+  .gauri-hero-art { aspect-ratio: 1.85; object-fit: cover; object-position: center; }
+  .gauri-hero-shortcuts { margin-top: 13px; }
+  .gauri-service-strip { font-size: .7rem; }
+  .gauri-audience article, .gauri-audience article:nth-child(even) { flex-direction: row; }
+  .gauri-steps { grid-template-columns: 1fr; gap: 8px; text-align: left; }
+  .gauri-steps article { display: grid; grid-template-columns: 42px 1fr; gap: 3px 10px; }
+  .gauri-steps i { grid-row: span 2; width: 39px; height: 39px; margin: 0; }
+  .gauri-steps :is(h3,p) { margin: 0; }
+  .gauri-finder { grid-template-columns: 1fr; }
+}
