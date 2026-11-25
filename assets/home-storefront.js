@@ -172,23 +172,7 @@ checkout.addEventListener('click', async () => {
 });
 renderCart();
 
-const nav = document.querySelector('#main-nav');
-const menuTrigger = document.querySelector('.menu-trigger');
-function setMenu(open) {
-  nav.classList.toggle('is-open', open);
-  menuTrigger.setAttribute('aria-expanded', String(open));
-}
-document.body.classList.add('js-nav');
-menuTrigger.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
-nav.addEventListener('click', event => {
-  if (event.target.closest('a')) setMenu(false);
-});
-nav.closest('header').addEventListener('keydown', event => {
-  if (event.key === 'Escape' && nav.classList.contains('is-open')) {
-    setMenu(false);
-    menuTrigger.focus();
-  }
-});
+if (new URLSearchParams(location.search).get('quote') === 'list') cartPanel.showModal();
 
 const form = document.querySelector('#quote-form');
 const formStatus = form.querySelector('.form-status');
@@ -228,5 +212,5 @@ function openLinkedGuide() {
   if (location.hash === '#size-guides') sizeGuide.open = true;
 }
 window.addEventListener('hashchange', openLinkedGuide);
-nav.querySelector('a[href="#size-guides"]').addEventListener('click', () => { sizeGuide.open = true; });
+document.querySelector('#main-nav a[href="#size-guides"]').addEventListener('click', () => { sizeGuide.open = true; });
 openLinkedGuide();

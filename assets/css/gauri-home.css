@@ -195,3 +195,81 @@ dialog::backdrop { background: rgb(12 28 48 / 50%); }
 @media (max-width: 680px) {
   .storefront-card.last-single { grid-column: 1/-1; width: calc((100% - 10px) / 2); justify-self: center; }
 }
+
+/* Shared header, mastheads and page surfaces. */
+:root { --navy: #101d30; --accent: #b45119; --accent-hover: #933c0b; }
+html.pg-loaded body.gauri-inner {
+  font: 16px/1.55 "DM Sans", system-ui, sans-serif;
+  letter-spacing: normal;
+  background: #f5f7fb;
+  color: var(--ink);
+  --clr-p: var(--primary);
+  --clr-s: var(--primary-hover);
+}
+.utility { background: #252932; }
+.utility .wrap { min-height: 28px; }
+.wordmark { padding-block: 7px; }
+.wordmark img { width: clamp(145px, 15vw, 187px); }
+#main-nav { height: auto; overflow: visible; padding-block: 7px; }
+.cart-trigger { text-decoration: none; }
+.cart-trigger:hover { background: var(--wash); }
+.hero { background: var(--navy); color: #fff; }
+.hero-grid { min-height: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 1.09fr); }
+.hero-copy { padding-block: clamp(27px, 4vw, 49px); }
+.hero h1 { max-width: 19ch; font-size: clamp(2.25rem, 4.15vw, 3.65rem); }
+.hero-copy > p:not(.eyebrow) { color: #e3edf7; }
+.hero .eyebrow { color: #ffc394; }
+.hero .button:not(.secondary) { background: var(--accent); border-color: var(--accent); }
+.hero .button:not(.secondary):hover { background: var(--accent-hover); }
+.hero .button.secondary { border-color: #c6d5e4; background: transparent; color: #fff; }
+.hero .button.secondary:hover { background: #263953; }
+.site-footer { background: #173962; }
+.site-footer nav { height: auto; overflow: visible; z-index: auto; }
+
+.gauri-inner main.container { max-width: min(1180px, calc(100% - 64px)); padding-inline: 0; min-height: 50vh; }
+.gauri-inner main .breadcrumb { font-size: .9rem; margin-bottom: 14px; }
+.gauri-inner main header.subpage-hero {
+  background: var(--navy);
+  border: 1px solid var(--navy);
+  color: #f8fbff;
+  border-radius: var(--radius);
+  padding: clamp(22px, 4vw, 47px);
+}
+.gauri-inner main header.subpage-hero h1 { color: #fff; font-weight: 670 !important; letter-spacing: -.045em; }
+.gauri-inner main header.subpage-hero h1::after { background: #e89765; width: 2.25rem; }
+.gauri-inner main header.subpage-hero a:not(.btn),
+.gauri-inner main header.subpage-hero .text-secondary { color: #e0ebf7 !important; }
+.gauri-inner main header.subpage-hero .btn-outline-dark { color: #fff; border-color: #b4c5d7; }
+.gauri-inner main header.subpage-hero .btn-outline-dark:hover { background: #30475f; color: #fff; }
+.gauri-inner main header.subpage-hero .btn-dark { background: var(--accent); border-color: var(--accent); }
+.gauri-inner main :is(section, article.subpage-hero) {
+  border-color: var(--line);
+  border-radius: var(--radius) !important;
+}
+.gauri-inner main a:not(.btn):not(.nav-link):not(.navbar-brand) { color: var(--primary); }
+.gauri-inner main :is(.price-block,.state-card) {
+  border: 1px solid var(--line) !important;
+  border-radius: 10px !important;
+  background: white;
+  color: var(--ink);
+}
+.gauri-inner main :is(.table th, .table thead th) { background: var(--wash); color: var(--ink); }
+.gauri-inner main .btn-dark { color: #fff; background: var(--primary); border-color: var(--primary); }
+.gauri-inner main .btn-dark:hover { background: var(--primary-hover); }
+.gauri-inner .site-header a, .gauri-inner .site-footer a { text-decoration-color: currentColor; }
+.gauri-inner .site-search { margin: 0; }
+
+@media (max-width: 680px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-copy { padding-block: 25px 6px; }
+  .hero h1 { font-size: clamp(2.1rem, 9vw, 2.65rem); }
+  .gauri-inner main.container { max-width: calc(100% - 32px); }
+}
+
+.gauri-inner main nav[aria-label="Breadcrumb"] {
+  height: auto !important;
+  margin-bottom: 16px;
+  overflow: visible;
+}
+.gauri-inner main nav[aria-label="Breadcrumb"] .breadcrumb { margin-bottom: 0; }
+.gauri-inner main .subpage-hero img { border-radius: 8px !important; }
