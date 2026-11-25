@@ -50,7 +50,7 @@ filters.hidden = false;
 filterProducts();
 
 const cartKey = 'gauri-quote-cart';
-const cartProducts = new Map();
+const cartProducts = new Map(Object.entries(window.gauriProducts ?? {}));
 for (const card of cards) {
   const link = card.querySelector('h3 a');
   const id = link.getAttribute('href').slice('product-'.length, -'.html'.length);
@@ -65,6 +65,7 @@ for (const card of cards) {
     const quantity = cart.get(id) ?? 0;
     if (quantity < 999) cart.set(id, quantity + 1);
     updateCart(`${cartProducts.get(id)} · quantity ${cart.get(id)} in your quote list`);
+    window.dataLayer?.push({event:'add_to_quote',product_id:id,quantity:1});
   });
   card.querySelector('.storefront-details').append(addButton);
 }
@@ -81,11 +82,14 @@ try {
 }
 
 const cartPanel = document.querySelector('#quote-cart');
-const cartTrigger = document.querySelector('.cart-trigger');
+const cartTrigger = document.querySelector('button[aria-controls=quote-cart]');
 const cartCount = cartTrigger.querySelector('.storefront-cart-count');
 const announcement = document.querySelector('#quote-announcement');
 const cartEmpty = cartPanel.querySelector('.cart-empty');
-cartTrigger.addEventListener('click', () => cartPanel.showModal());
+cartTrigger.addEventListener('click', () => {
+  cartPanel.showModal();
+  window.dataLayer?.push({event:'view_quote'});
+});
 const cartItems = cartPanel.querySelector('.storefront-cart-items');
 const cartStatus = cartPanel.querySelector('.storefront-cart-status');
 const checkout = cartPanel.querySelector('.storefront-checkout');
@@ -188,6 +192,7 @@ form.addEventListener('submit', async event => {
     formStatus.textContent = 'Enter your phone, name, organisation and product requirements.';
     return;
   }
+  window.dataLayer?.push({event:'quote_form_submit'});
   submit.disabled = true;
   formStatus.textContent = 'Sending your request…';
   try {
@@ -199,6 +204,7 @@ form.addEventListener('submit', async event => {
     const result = await response.json();
     if (!response.ok || String(result.success) !== 'true') throw new Error('Submission not confirmed');
     form.reset();
+    window.dataLayer?.push({event:'quote_form_success'});
     formStatus.textContent = 'Thank you. Your quote request was sent.';
   } catch {
     formStatus.textContent = 'Your request could not be sent. Please call or contact us on WhatsApp.';
@@ -214,3 +220,11 @@ function openLinkedGuide() {
 window.addEventListener('hashchange', openLinkedGuide);
 document.querySelector('#main-nav a[href="#size-guides"]').addEventListener('click', () => { sizeGuide.open = true; });
 openLinkedGuide();
+
+cartPanel.querySelector('.quote-with-list').addEventListener('click', () => {
+  if (!cart.size) return;
+  form.elements.Product.value = [...cart].map(([id, quantity]) => `${cartProducts.get(id)} × ${quantity}`).join('\n').slice(0,1000);
+  form.elements.Quantity.value = [...cart.values()].reduce((sum, quantity) => sum + quantity, 0);
+  cartPanel.close();
+  form.elements.Phone.focus();
+});

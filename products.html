@@ -82,13 +82,18 @@
   <div id="catalog-search-box" class="mb-3" hidden>
     <label for="catalog-search" class="form-label fw-semibold">Search products</label>
     <input id="catalog-search" class="form-control" type="search" placeholder="Try beakers, pipette tips or water baths" autocomplete="off">
+    <div class="catalog-controls">
+      <label>Material<select id="catalog-material"><option value="">All materials</option><option>LDPE</option><option>HDPE</option><option>Polypropylene</option><option>Polycarbonate</option><option>ABS</option></select></label>
+      <label>Capacity or tube fit<select id="catalog-capacity"><option value="">All capacities</option><option value="small">Up to 10 mL</option><option value="medium">Over 10 to 100 mL</option><option value="large">Over 100 mL</option></select></label>
+      <label>Sort by<select id="catalog-sort"><option value="">Catalogue order</option><option value="name">Name A–Z</option></select></label>
+    </div>
     <p class="small mb-0 mt-2" id="catalog-results" role="status">65 products</p>
   </div>
   <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0" aria-label="Jump to a product category"><li><a class="btn btn-sm btn-outline-dark" href="#glassware">Laboratory Glassware</a></li><li><a class="btn btn-sm btn-outline-dark" href="#tubing">Test Tubes &amp; Tubing</a></li><li><a class="btn btn-sm btn-outline-dark" href="#equipment">Laboratory Equipment</a></li><li><a class="btn btn-sm btn-outline-dark" href="#heating">Heating &amp; Stirring</a></li><li><a class="btn btn-sm btn-outline-dark" href="#optics">Microscopes &amp; Optics</a></li><li><a class="btn btn-sm btn-outline-dark" href="#filtration">Filtration &amp; Separation</a></li><li><a class="btn btn-sm btn-outline-dark" href="#consumables">Plasticware &amp; Consumables</a></li><li><a class="btn btn-sm btn-outline-dark" href="#accessories">Stands, Clamps &amp; Racks</a></li><li><a class="btn btn-sm btn-outline-dark" href="#safety">Safety Essentials</a></li><li><a class="btn btn-sm btn-outline-dark" href="#cryogenic">Cryogenic Storage</a></li></ul>
 </header>
 <section id="glassware" class="catalog-section rounded-3" aria-labelledby="glassware-heading">
       <h2 class="section-heading mb-3" id="glassware-heading">Laboratory Glassware</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-beakers">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-beakers" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-beakers.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-beakers.webp" alt="Laboratory Beakers" width="600" height="600" loading="eager" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-beakers.html">Laboratory Beakers</a></h3>
@@ -97,7 +102,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Beakers#site-visit" aria-label="Get Quote for Laboratory Beakers">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="conical-flasks">
+<li class="col catalog-product" id="conical-flasks" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-conical-flasks.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/conical-flasks.webp" alt="Conical Flasks" width="600" height="600" loading="eager" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-conical-flasks.html">Conical Flasks</a></h3>
@@ -106,7 +111,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Conical%20Flasks#site-visit" aria-label="Get Quote for Conical Flasks">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="volumetric-flasks">
+<li class="col catalog-product" id="volumetric-flasks" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-volumetric-flasks.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/volumetric-flasks.webp" alt="Volumetric Flasks" width="600" height="600" loading="eager" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-volumetric-flasks.html">Volumetric Flasks</a></h3>
@@ -115,7 +120,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Volumetric%20Flasks#site-visit" aria-label="Get Quote for Volumetric Flasks">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="measuring-cylinders">
+<li class="col catalog-product" id="measuring-cylinders" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-measuring-cylinders.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/measuring-cylinders.webp" alt="Measuring Cylinders" width="600" height="600" loading="eager" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-measuring-cylinders.html">Measuring Cylinders</a></h3>
@@ -124,7 +129,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Measuring%20Cylinders#site-visit" aria-label="Get Quote for Measuring Cylinders">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="burettes">
+<li class="col catalog-product" id="burettes" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-burettes.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/burettes.webp" alt="Burettes" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-burettes.html">Burettes</a></h3>
@@ -133,7 +138,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Burettes#site-visit" aria-label="Get Quote for Burettes">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="glass-pipettes">
+<li class="col catalog-product" id="glass-pipettes" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-glass-pipettes.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/glass-pipettes.webp" alt="Glass Pipettes" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-glass-pipettes.html">Glass Pipettes</a></h3>
@@ -142,7 +147,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Glass%20Pipettes#site-visit" aria-label="Get Quote for Glass Pipettes">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="glass-droppers">
+<li class="col catalog-product" id="glass-droppers" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-glass-droppers.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/glass-droppers.webp" alt="Glass Droppers" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-glass-droppers.html">Glass Droppers</a></h3>
@@ -151,7 +156,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Glass%20Droppers#site-visit" aria-label="Get Quote for Glass Droppers">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="petri-dishes">
+<li class="col catalog-product" id="petri-dishes" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-petri-dishes.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/petri-dishes.webp" alt="Petri Dishes" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-petri-dishes.html">Petri Dishes</a></h3>
@@ -160,7 +165,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Petri%20Dishes#site-visit" aria-label="Get Quote for Petri Dishes">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="watch-glasses">
+<li class="col catalog-product" id="watch-glasses" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-watch-glasses.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/watch-glasses.webp" alt="Watch Glasses" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-watch-glasses.html">Watch Glasses</a></h3>
@@ -169,7 +174,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Watch%20Glasses#site-visit" aria-label="Get Quote for Watch Glasses">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="reagent-bottles">
+<li class="col catalog-product" id="reagent-bottles" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-reagent-bottles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/reagent-bottles.webp" alt="Reagent Bottles" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-reagent-bottles.html">Reagent Bottles</a></h3>
@@ -178,7 +183,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Reagent%20Bottles#site-visit" aria-label="Get Quote for Reagent Bottles">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="desiccators">
+<li class="col catalog-product" id="desiccators" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-desiccators.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/desiccators.webp" alt="Desiccators" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-desiccators.html">Desiccators</a></h3>
@@ -186,7 +191,7 @@
         <a class="catalog-details mt-auto mb-2" href="product-desiccators.html" aria-label="View details for Desiccators">View Details</a>
         <a class="btn btn-dark align-self-center" href="index.html?product=Desiccators#site-visit" aria-label="Get Quote for Desiccators">Get Quote</a>
       </article>
-    </li><li class="col catalog-product" id="plastic-plain-and-vacuum-desiccators">
+    </li><li class="col catalog-product" id="plastic-plain-and-vacuum-desiccators" data-material="" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-plastic-plain-and-vacuum-desiccators.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/plastic-plain-and-vacuum-desiccators.webp" alt="Plastic Plain and Vacuum Desiccators" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-plastic-plain-and-vacuum-desiccators.html">Plastic Plain and Vacuum Desiccators</a></h3>
@@ -197,7 +202,7 @@
     </section>
 <section id="tubing" class="catalog-section rounded-3" aria-labelledby="tubing-heading">
       <h2 class="section-heading mb-3" id="tubing-heading">Test Tubes &amp; Tubing</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="test-tubes">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="test-tubes" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-test-tubes.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/test-tubes.webp" alt="Test Tubes" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-test-tubes.html">Test Tubes</a></h3>
@@ -206,7 +211,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Test%20Tubes#site-visit" aria-label="Get Quote for Test Tubes">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="boiling-tubes">
+<li class="col catalog-product" id="boiling-tubes" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-boiling-tubes.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/boiling-tubes.webp" alt="Boiling Tubes" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-boiling-tubes.html">Boiling Tubes</a></h3>
@@ -215,7 +220,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Boiling%20Tubes#site-visit" aria-label="Get Quote for Boiling Tubes">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="glass-tubing">
+<li class="col catalog-product" id="glass-tubing" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-glass-tubing.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/glass-tubing.webp" alt="Glass Tubing" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-glass-tubing.html">Glass Tubing</a></h3>
@@ -224,7 +229,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Glass%20Tubing#site-visit" aria-label="Get Quote for Glass Tubing">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="glass-stirring-rods">
+<li class="col catalog-product" id="glass-stirring-rods" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-glass-stirring-rods.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/glass-stirring-rods.webp" alt="Glass Stirring Rods" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-glass-stirring-rods.html">Glass Stirring Rods</a></h3>
@@ -236,7 +241,7 @@
     </section>
 <section id="equipment" class="catalog-section rounded-3" aria-labelledby="equipment-heading">
       <h2 class="section-heading mb-3" id="equipment-heading">Laboratory Equipment</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-weighing-balances">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-weighing-balances" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-weighing-balances.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-weighing-balances.webp" alt="Laboratory Weighing Balances" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-weighing-balances.html">Laboratory Weighing Balances</a></h3>
@@ -245,7 +250,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Weighing%20Balances#site-visit" aria-label="Get Quote for Laboratory Weighing Balances">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="benchtop-centrifuges">
+<li class="col catalog-product" id="benchtop-centrifuges" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-benchtop-centrifuges.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/benchtop-centrifuges.webp" alt="Benchtop Centrifuges" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-benchtop-centrifuges.html">Benchtop Centrifuges</a></h3>
@@ -254,7 +259,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Benchtop%20Centrifuges#site-visit" aria-label="Get Quote for Benchtop Centrifuges">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="laboratory-ovens">
+<li class="col catalog-product" id="laboratory-ovens" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-ovens.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-ovens.webp" alt="Laboratory Ovens" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-ovens.html">Laboratory Ovens</a></h3>
@@ -263,7 +268,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Ovens#site-visit" aria-label="Get Quote for Laboratory Ovens">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="laboratory-water-baths">
+<li class="col catalog-product" id="laboratory-water-baths" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-water-baths.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-water-baths.webp" alt="Laboratory Water Baths" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-water-baths.html">Laboratory Water Baths</a></h3>
@@ -272,7 +277,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Water%20Baths#site-visit" aria-label="Get Quote for Laboratory Water Baths">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="ph-meters">
+<li class="col catalog-product" id="ph-meters" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-ph-meters.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/ph-meters.webp" alt="pH Meters" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-ph-meters.html">pH Meters</a></h3>
@@ -284,7 +289,7 @@
     </section>
 <section id="heating" class="catalog-section rounded-3" aria-labelledby="heating-heading">
       <h2 class="section-heading mb-3" id="heating-heading">Heating &amp; Stirring</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-hot-plates">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-hot-plates" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-hot-plates.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-hot-plates.webp" alt="Laboratory Hot Plates" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-hot-plates.html">Laboratory Hot Plates</a></h3>
@@ -293,7 +298,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Hot%20Plates#site-visit" aria-label="Get Quote for Laboratory Hot Plates">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="magnetic-stirrers">
+<li class="col catalog-product" id="magnetic-stirrers" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-magnetic-stirrers.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/magnetic-stirrers.webp" alt="Magnetic Stirrers" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-magnetic-stirrers.html">Magnetic Stirrers</a></h3>
@@ -302,7 +307,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Magnetic%20Stirrers#site-visit" aria-label="Get Quote for Magnetic Stirrers">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="heating-mantles">
+<li class="col catalog-product" id="heating-mantles" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-heating-mantles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/heating-mantles.webp" alt="Heating Mantles" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-heating-mantles.html">Heating Mantles</a></h3>
@@ -314,7 +319,7 @@
     </section>
 <section id="optics" class="catalog-section rounded-3" aria-labelledby="optics-heading">
       <h2 class="section-heading mb-3" id="optics-heading">Microscopes &amp; Optics</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="compound-microscopes">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="compound-microscopes" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-compound-microscopes.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/compound-microscopes.webp" alt="Compound Microscopes" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-compound-microscopes.html">Compound Microscopes</a></h3>
@@ -323,7 +328,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Compound%20Microscopes#site-visit" aria-label="Get Quote for Compound Microscopes">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="microscope-objectives">
+<li class="col catalog-product" id="microscope-objectives" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-microscope-objectives.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/microscope-objectives.webp" alt="Microscope Objectives" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-microscope-objectives.html">Microscope Objectives</a></h3>
@@ -332,7 +337,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Microscope%20Objectives#site-visit" aria-label="Get Quote for Microscope Objectives">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="microscope-slides">
+<li class="col catalog-product" id="microscope-slides" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-microscope-slides.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/microscope-slides.webp" alt="Microscope Slides" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-microscope-slides.html">Microscope Slides</a></h3>
@@ -341,7 +346,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Microscope%20Slides#site-visit" aria-label="Get Quote for Microscope Slides">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="cover-slips">
+<li class="col catalog-product" id="cover-slips" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-cover-slips.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/cover-slips.webp" alt="Cover Slips" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-cover-slips.html">Cover Slips</a></h3>
@@ -353,7 +358,7 @@
     </section>
 <section id="filtration" class="catalog-section rounded-3" aria-labelledby="filtration-heading">
       <h2 class="section-heading mb-3" id="filtration-heading">Filtration &amp; Separation</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-funnels">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-funnels" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-funnels.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-funnels.webp" alt="Laboratory Funnels" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-funnels.html">Laboratory Funnels</a></h3>
@@ -362,7 +367,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Funnels#site-visit" aria-label="Get Quote for Laboratory Funnels">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="filter-papers">
+<li class="col catalog-product" id="filter-papers" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-filter-papers.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/filter-papers.webp" alt="Filter Papers" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-filter-papers.html">Filter Papers</a></h3>
@@ -371,7 +376,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Filter%20Papers#site-visit" aria-label="Get Quote for Filter Papers">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="filtration-sets">
+<li class="col catalog-product" id="filtration-sets" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-filtration-sets.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/filtration-sets.webp" alt="Filtration Sets" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-filtration-sets.html">Filtration Sets</a></h3>
@@ -383,7 +388,7 @@
     </section>
 <section id="consumables" class="catalog-section rounded-3" aria-labelledby="consumables-heading">
       <h2 class="section-heading mb-3" id="consumables-heading">Plasticware &amp; Consumables</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="sample-vials">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="sample-vials" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-sample-vials.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/sample-vials.webp" alt="Sample Vials" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-sample-vials.html">Sample Vials</a></h3>
@@ -392,7 +397,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Sample%20Vials#site-visit" aria-label="Get Quote for Sample Vials">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="wash-bottles">
+<li class="col catalog-product" id="wash-bottles" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-wash-bottles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/wash-bottles.webp" alt="Wash Bottles" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-wash-bottles.html">Wash Bottles</a></h3>
@@ -401,7 +406,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Wash%20Bottles#site-visit" aria-label="Get Quote for Wash Bottles">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="pipette-tips">
+<li class="col catalog-product" id="pipette-tips" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-pipette-tips.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/pipette-tips.webp" alt="Pipette Tips" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-pipette-tips.html">Pipette Tips</a></h3>
@@ -410,7 +415,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Pipette%20Tips#site-visit" aria-label="Get Quote for Pipette Tips">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="sample-containers">
+<li class="col catalog-product" id="sample-containers" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-sample-containers.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/sample-containers.webp" alt="Sample Containers" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-sample-containers.html">Sample Containers</a></h3>
@@ -419,7 +424,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Sample%20Containers#site-visit" aria-label="Get Quote for Sample Containers">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="laboratory-labels">
+<li class="col catalog-product" id="laboratory-labels" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-labels.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-labels.webp" alt="Laboratory Labels" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-labels.html">Laboratory Labels</a></h3>
@@ -427,7 +432,7 @@
         <a class="catalog-details mt-auto mb-2" href="product-laboratory-labels.html" aria-label="View details for Laboratory Labels">View Details</a>
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Labels#site-visit" aria-label="Get Quote for Laboratory Labels">Get Quote</a>
       </article>
-    </li><li class="col catalog-product" id="sterile-cell-spreaders">
+    </li><li class="col catalog-product" id="sterile-cell-spreaders" data-material="" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-sterile-cell-spreaders.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/sterile-cell-spreaders.webp" alt="Sterile Cell Spreaders" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-sterile-cell-spreaders.html">Sterile Cell Spreaders</a></h3>
@@ -435,7 +440,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-sterile-cell-spreaders.html" aria-label="View details for Sterile Cell Spreaders">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Sterile%20Cell%20Spreaders#site-visit" aria-label="Get Quote for Sterile Cell Spreaders">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="narrow-mouth-polypropylene-bottles">
+<li class="col catalog-product" id="narrow-mouth-polypropylene-bottles" data-material="Polypropylene" data-capacity="small medium large">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-narrow-mouth-polypropylene-bottles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/narrow-mouth-polypropylene-bottles.webp" alt="Narrow-Mouth Polypropylene Bottles" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-narrow-mouth-polypropylene-bottles.html">Narrow-Mouth Polypropylene Bottles</a></h3>
@@ -443,7 +448,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-narrow-mouth-polypropylene-bottles.html" aria-label="View details for Narrow-Mouth Polypropylene Bottles">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Narrow-Mouth%20Polypropylene%20Bottles#site-visit" aria-label="Get Quote for Narrow-Mouth Polypropylene Bottles">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="narrow-mouth-ldpe-bottles">
+<li class="col catalog-product" id="narrow-mouth-ldpe-bottles" data-material="LDPE" data-capacity="small medium large">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-narrow-mouth-ldpe-bottles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/narrow-mouth-ldpe-bottles.webp" alt="Narrow-Mouth LDPE Bottles" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-narrow-mouth-ldpe-bottles.html">Narrow-Mouth LDPE Bottles</a></h3>
@@ -451,7 +456,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-narrow-mouth-ldpe-bottles.html" aria-label="View details for Narrow-Mouth LDPE Bottles">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Narrow-Mouth%20LDPE%20Bottles#site-visit" aria-label="Get Quote for Narrow-Mouth LDPE Bottles">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="narrow-mouth-hdpe-bottles">
+<li class="col catalog-product" id="narrow-mouth-hdpe-bottles" data-material="HDPE" data-capacity="small medium large">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-narrow-mouth-hdpe-bottles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/narrow-mouth-hdpe-bottles.webp" alt="Narrow-Mouth HDPE Bottles" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-narrow-mouth-hdpe-bottles.html">Narrow-Mouth HDPE Bottles</a></h3>
@@ -459,7 +464,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-narrow-mouth-hdpe-bottles.html" aria-label="View details for Narrow-Mouth HDPE Bottles">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Narrow-Mouth%20HDPE%20Bottles#site-visit" aria-label="Get Quote for Narrow-Mouth HDPE Bottles">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="laboratory-sealing-film">
+<li class="col catalog-product" id="laboratory-sealing-film" data-material="" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-laboratory-sealing-film.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-sealing-film.webp" alt="Laboratory Sealing Film" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-sealing-film.html">Laboratory Sealing Film</a></h3>
@@ -467,7 +472,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-laboratory-sealing-film.html" aria-label="View details for Laboratory Sealing Film">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Sealing%20Film#site-visit" aria-label="Get Quote for Laboratory Sealing Film">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="euro-style-ldpe-dropping-bottles">
+<li class="col catalog-product" id="euro-style-ldpe-dropping-bottles" data-material="LDPE" data-capacity="medium large">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-euro-style-ldpe-dropping-bottles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/euro-style-ldpe-dropping-bottles.webp" alt="Euro-Style LDPE Dropping Bottles" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-euro-style-ldpe-dropping-bottles.html">Euro-Style LDPE Dropping Bottles</a></h3>
@@ -475,7 +480,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-euro-style-ldpe-dropping-bottles.html" aria-label="View details for Euro-Style LDPE Dropping Bottles">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Euro-Style%20LDPE%20Dropping%20Bottles#site-visit" aria-label="Get Quote for Euro-Style LDPE Dropping Bottles">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="ldpe-wash-bottles">
+<li class="col catalog-product" id="ldpe-wash-bottles" data-material="LDPE" data-capacity="large">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-ldpe-wash-bottles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/ldpe-wash-bottles.webp" alt="LDPE Wash Bottles" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-ldpe-wash-bottles.html">LDPE Wash Bottles</a></h3>
@@ -483,7 +488,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-ldpe-wash-bottles.html" aria-label="View details for LDPE Wash Bottles">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=LDPE%20Wash%20Bottles#site-visit" aria-label="Get Quote for LDPE Wash Bottles">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="one-piece-ldpe-wash-bottles">
+<li class="col catalog-product" id="one-piece-ldpe-wash-bottles" data-material="LDPE" data-capacity="large">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-one-piece-ldpe-wash-bottles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/one-piece-ldpe-wash-bottles.webp" alt="One-Piece LDPE Wash Bottles" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-one-piece-ldpe-wash-bottles.html">One-Piece LDPE Wash Bottles</a></h3>
@@ -491,7 +496,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-one-piece-ldpe-wash-bottles.html" aria-label="View details for One-Piece LDPE Wash Bottles">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=One-Piece%20LDPE%20Wash%20Bottles#site-visit" aria-label="Get Quote for One-Piece LDPE Wash Bottles">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="disposable-pasteur-transfer-pipettes">
+<li class="col catalog-product" id="disposable-pasteur-transfer-pipettes" data-material="LDPE" data-capacity="small medium">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-disposable-pasteur-transfer-pipettes.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/disposable-pasteur-transfer-pipettes.webp" alt="Disposable Pasteur Transfer Pipettes" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-disposable-pasteur-transfer-pipettes.html">Disposable Pasteur Transfer Pipettes</a></h3>
@@ -502,7 +507,7 @@
     </section>
 <section id="accessories" class="catalog-section rounded-3" aria-labelledby="accessories-heading">
       <h2 class="section-heading mb-3" id="accessories-heading">Stands, Clamps &amp; Racks</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="test-tube-racks">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="test-tube-racks" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-test-tube-racks.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/test-tube-racks.webp" alt="Test Tube Racks" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-test-tube-racks.html">Test Tube Racks</a></h3>
@@ -511,7 +516,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Test%20Tube%20Racks#site-visit" aria-label="Get Quote for Test Tube Racks">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="laboratory-support-stands">
+<li class="col catalog-product" id="laboratory-support-stands" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-support-stands.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-support-stands.webp" alt="Laboratory Support Stands" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-support-stands.html">Laboratory Support Stands</a></h3>
@@ -520,7 +525,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Support%20Stands#site-visit" aria-label="Get Quote for Laboratory Support Stands">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="laboratory-clamps">
+<li class="col catalog-product" id="laboratory-clamps" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-clamps.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-clamps.webp" alt="Laboratory Clamps" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-clamps.html">Laboratory Clamps</a></h3>
@@ -528,7 +533,7 @@
         <a class="catalog-details mt-auto mb-2" href="product-laboratory-clamps.html" aria-label="View details for Laboratory Clamps">View Details</a>
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Clamps#site-visit" aria-label="Get Quote for Laboratory Clamps">Get Quote</a>
       </article>
-    </li><li class="col catalog-product" id="rpp-microcentrifuge-tube-rack">
+    </li><li class="col catalog-product" id="rpp-microcentrifuge-tube-rack" data-material="" data-capacity="small">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-rpp-microcentrifuge-tube-rack.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/rpp-microcentrifuge-tube-rack.webp" alt="RPP Microcentrifuge Tube Rack" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-rpp-microcentrifuge-tube-rack.html">RPP Microcentrifuge Tube Rack</a></h3>
@@ -536,7 +541,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-rpp-microcentrifuge-tube-rack.html" aria-label="View details for RPP Microcentrifuge Tube Rack">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=RPP%20Microcentrifuge%20Tube%20Rack#site-visit" aria-label="Get Quote for RPP Microcentrifuge Tube Rack">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="polycarbonate-microcentrifuge-tube-rack">
+<li class="col catalog-product" id="polycarbonate-microcentrifuge-tube-rack" data-material="Polycarbonate" data-capacity="small">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-polycarbonate-microcentrifuge-tube-rack.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/polycarbonate-microcentrifuge-tube-rack.webp" alt="Polycarbonate Microcentrifuge Tube Rack" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-polycarbonate-microcentrifuge-tube-rack.html">Polycarbonate Microcentrifuge Tube Rack</a></h3>
@@ -544,7 +549,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-polycarbonate-microcentrifuge-tube-rack.html" aria-label="View details for Polycarbonate Microcentrifuge Tube Rack">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Polycarbonate%20Microcentrifuge%20Tube%20Rack#site-visit" aria-label="Get Quote for Polycarbonate Microcentrifuge Tube Rack">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="interlocking-conical-tube-racks">
+<li class="col catalog-product" id="interlocking-conical-tube-racks" data-material="ABS" data-capacity="medium">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-interlocking-conical-tube-racks.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/interlocking-conical-tube-racks.webp" alt="Interlocking Conical Tube Racks" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-interlocking-conical-tube-racks.html">Interlocking Conical Tube Racks</a></h3>
@@ -552,7 +557,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-interlocking-conical-tube-racks.html" aria-label="View details for Interlocking Conical Tube Racks">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Interlocking%20Conical%20Tube%20Racks#site-visit" aria-label="Get Quote for Interlocking Conical Tube Racks">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="universal-centrifuge-tube-rack">
+<li class="col catalog-product" id="universal-centrifuge-tube-rack" data-material="Polypropylene" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-universal-centrifuge-tube-rack.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/universal-centrifuge-tube-rack.webp" alt="Universal Centrifuge Tube Rack" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-universal-centrifuge-tube-rack.html">Universal Centrifuge Tube Rack</a></h3>
@@ -560,7 +565,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-universal-centrifuge-tube-rack.html" aria-label="View details for Universal Centrifuge Tube Rack">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Universal%20Centrifuge%20Tube%20Rack#site-visit" aria-label="Get Quote for Universal Centrifuge Tube Rack">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="foldable-polypropylene-tube-rack">
+<li class="col catalog-product" id="foldable-polypropylene-tube-rack" data-material="Polypropylene" data-capacity="medium">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-foldable-polypropylene-tube-rack.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/foldable-polypropylene-tube-rack.webp" alt="Foldable Polypropylene Tube Rack" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-foldable-polypropylene-tube-rack.html">Foldable Polypropylene Tube Rack</a></h3>
@@ -571,7 +576,7 @@
     </section>
 <section id="safety" class="catalog-section rounded-3" aria-labelledby="safety-heading">
       <h2 class="section-heading mb-3" id="safety-heading">Safety Essentials</h2>
-      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-safety-goggles">
+      <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="laboratory-safety-goggles" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-safety-goggles.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-safety-goggles.webp" alt="Laboratory Safety Goggles" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-safety-goggles.html">Laboratory Safety Goggles</a></h3>
@@ -580,7 +585,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Safety%20Goggles#site-visit" aria-label="Get Quote for Laboratory Safety Goggles">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="laboratory-gloves">
+<li class="col catalog-product" id="laboratory-gloves" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-gloves.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-gloves.webp" alt="Laboratory Gloves" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-gloves.html">Laboratory Gloves</a></h3>
@@ -589,7 +594,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Gloves#site-visit" aria-label="Get Quote for Laboratory Gloves">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="laboratory-coats">
+<li class="col catalog-product" id="laboratory-coats" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-coats.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-coats.webp" alt="Laboratory Coats" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-coats.html">Laboratory Coats</a></h3>
@@ -598,7 +603,7 @@
         <a class="btn btn-dark align-self-center" href="index.html?product=Laboratory%20Coats#site-visit" aria-label="Get Quote for Laboratory Coats">Get Quote</a>
       </article>
     </li>
-<li class="col catalog-product" id="laboratory-face-masks">
+<li class="col catalog-product" id="laboratory-face-masks" data-material="" data-capacity="">
       <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
         <a href="product-laboratory-face-masks.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/laboratory-face-masks.webp" alt="Laboratory Face Masks" width="600" height="600" loading="lazy" decoding="async"></a>
         <h3 class="h5 mt-2 mb-1"><a href="product-laboratory-face-masks.html">Laboratory Face Masks</a></h3>
@@ -609,7 +614,7 @@
     </li></ul>
     </section><section id="cryogenic" class="catalog-section rounded-3" aria-labelledby="cryogenic-heading">
 <h2 class="section-heading mb-3" id="cryogenic-heading">Cryogenic Storage</h2>
-<ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="polypropylene-freezing-tubes">
+<ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 list-unstyled mb-0"><li class="col catalog-product" id="polypropylene-freezing-tubes" data-material="" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-polypropylene-freezing-tubes.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/polypropylene-freezing-tubes.webp" alt="Polypropylene Freezing Tubes" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-polypropylene-freezing-tubes.html">Polypropylene Freezing Tubes</a></h3>
@@ -617,7 +622,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-polypropylene-freezing-tubes.html" aria-label="View details for Polypropylene Freezing Tubes">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Polypropylene%20Freezing%20Tubes#site-visit" aria-label="Get Quote for Polypropylene Freezing Tubes">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="polypropylene-storage-vials">
+<li class="col catalog-product" id="polypropylene-storage-vials" data-material="" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-polypropylene-storage-vials.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/polypropylene-storage-vials.webp" alt="Polypropylene Storage Vials" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-polypropylene-storage-vials.html">Polypropylene Storage Vials</a></h3>
@@ -625,7 +630,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-polypropylene-storage-vials.html" aria-label="View details for Polypropylene Storage Vials">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Polypropylene%20Storage%20Vials#site-visit" aria-label="Get Quote for Polypropylene Storage Vials">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="polypropylene-centrifuge-tube-box">
+<li class="col catalog-product" id="polypropylene-centrifuge-tube-box" data-material="Polypropylene" data-capacity="medium">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-polypropylene-centrifuge-tube-box.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/polypropylene-centrifuge-tube-box.webp" alt="Polypropylene Centrifuge Tube Box" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-polypropylene-centrifuge-tube-box.html">Polypropylene Centrifuge Tube Box</a></h3>
@@ -633,7 +638,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-polypropylene-centrifuge-tube-box.html" aria-label="View details for Polypropylene Centrifuge Tube Box">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Polypropylene%20Centrifuge%20Tube%20Box#site-visit" aria-label="Get Quote for Polypropylene Centrifuge Tube Box">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="single-hand-cryovial-holder-rack">
+<li class="col catalog-product" id="single-hand-cryovial-holder-rack" data-material="Polycarbonate" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-single-hand-cryovial-holder-rack.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/single-hand-cryovial-holder-rack.webp" alt="Single-Hand Cryovial Holder Rack" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-single-hand-cryovial-holder-rack.html">Single-Hand Cryovial Holder Rack</a></h3>
@@ -641,7 +646,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-single-hand-cryovial-holder-rack.html" aria-label="View details for Single-Hand Cryovial Holder Rack">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Single-Hand%20Cryovial%20Holder%20Rack#site-visit" aria-label="Get Quote for Single-Hand Cryovial Holder Rack">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="polycarbonate-cryo-storage-box">
+<li class="col catalog-product" id="polycarbonate-cryo-storage-box" data-material="Polycarbonate" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-polycarbonate-cryo-storage-box.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/polycarbonate-cryo-storage-box.webp" alt="Polycarbonate Cryo Storage Box" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-polycarbonate-cryo-storage-box.html">Polycarbonate Cryo Storage Box</a></h3>
@@ -649,7 +654,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-polycarbonate-cryo-storage-box.html" aria-label="View details for Polycarbonate Cryo Storage Box">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Polycarbonate%20Cryo%20Storage%20Box#site-visit" aria-label="Get Quote for Polycarbonate Cryo Storage Box">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="100-position-polycarbonate-cryo-box">
+<li class="col catalog-product" id="100-position-polycarbonate-cryo-box" data-material="Polycarbonate" data-capacity="small">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-100-position-polycarbonate-cryo-box.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/100-position-polycarbonate-cryo-box.webp" alt="100-Position Polycarbonate Cryo Box" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-100-position-polycarbonate-cryo-box.html">100-Position Polycarbonate Cryo Box</a></h3>
@@ -657,7 +662,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-100-position-polycarbonate-cryo-box.html" aria-label="View details for 100-Position Polycarbonate Cryo Box">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=100-Position%20Polycarbonate%20Cryo%20Box#site-visit" aria-label="Get Quote for 100-Position Polycarbonate Cryo Box">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="polypropylene-cryo-cube-box">
+<li class="col catalog-product" id="polypropylene-cryo-cube-box" data-material="Polypropylene" data-capacity="">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-polypropylene-cryo-cube-box.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/polypropylene-cryo-cube-box.webp" alt="Polypropylene Cryo Cube Box" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-polypropylene-cryo-cube-box.html">Polypropylene Cryo Cube Box</a></h3>
@@ -665,7 +670,7 @@
 <a class="catalog-details mt-auto mb-2" href="product-polypropylene-cryo-cube-box.html" aria-label="View details for Polypropylene Cryo Cube Box">View Details</a>
 <a class="btn btn-dark align-self-center" href="index.html?product=Polypropylene%20Cryo%20Cube%20Box#site-visit" aria-label="Get Quote for Polypropylene Cryo Cube Box">Get Quote</a>
 </article></li>
-<li class="col catalog-product" id="external-thread-polypropylene-cryovials">
+<li class="col catalog-product" id="external-thread-polypropylene-cryovials" data-material="Polypropylene" data-capacity="small">
 <article class="price-block shadow-sm h-100 d-flex flex-column p-3">
 <a href="product-external-thread-polypropylene-cryovials.html" tabindex="-1" aria-hidden="true"><img class="catalog-photo" src="img/products/external-thread-polypropylene-cryovials.webp" alt="External-Thread Polypropylene Cryovials" width="600" height="600" loading="lazy" decoding="async"></a>
 <h3 class="h5 mt-2 mb-1"><a href="product-external-thread-polypropylene-cryovials.html">External-Thread Polypropylene Cryovials</a></h3>
@@ -685,56 +690,71 @@
   </footer>
 <script src="_ext/cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-const searchBox = document.getElementById('catalog-search-box');
-const search = document.getElementById('catalog-search');
-const results = document.getElementById('catalog-results');
-const normalize = value => value.toLowerCase().trim().replace(/[^a-z0-9 ]/g, ' ').replace(/ +/g, ' ');
-const sections = [...document.querySelectorAll('.catalog-section')].map(section => ({
-  section,
-  products: [...section.querySelectorAll('.catalog-product')].map(product => ({
-    product,
-    text: normalize(product.querySelector('h3').textContent + ' ' + product.querySelector('p').textContent + ' ' + section.querySelector('h2').textContent)
-  }))
-}));
-
-function updateResults() {
-  const terms = normalize(search.value).split(' ').filter(Boolean);
-  let total = 0;
-  for (const {section, products} of sections) {
-    let visibleCount = 0;
-    for (const {product, text} of products) {
-      const visible = terms.every(term => text.includes(term));
-      product.hidden = !visible;
-      if (visible) visibleCount += 1;
+(() => {
+  const searchBox = document.querySelector('#catalog-search-box');
+  const search = document.querySelector('#catalog-search');
+  const material = document.querySelector('#catalog-material');
+  const capacity = document.querySelector('#catalog-capacity');
+  const order = document.querySelector('#catalog-sort');
+  const results = document.querySelector('#catalog-results');
+  const normalize = value => value.toLowerCase().trim().replace(/[^a-z0-9 ]/g, ' ').replace(/ +/g, ' ');
+  const sections = [...document.querySelectorAll('.catalog-section')].map(section => {
+    const grid = section.querySelector('ul');
+    const heading = section.querySelector('h2').textContent;
+    const products = [...grid.querySelectorAll('.catalog-product')].map(product => ({
+      product,
+      title: product.querySelector('h3').textContent.trim(),
+      searchText: normalize(product.querySelector('h3').textContent + ' ' + product.querySelector('p').textContent + ' ' + heading)
+    }));
+    const more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'button secondary my-3';
+    more.textContent = 'Load More Products';
+    section.append(more);
+    const group = {section, grid, products, more, limit:8};
+    more.addEventListener('click', () => {
+      const hidden = products.filter(({product}) => product.hidden);
+      group.limit += 8;
+      updateResults();
+      hidden.find(({product}) => !product.hidden)?.product.querySelector('h3 a').focus();
+    });
+    return group;
+  });
+  function updateResults() {
+    const terms = normalize(search.value).split(' ').filter(Boolean);
+    let total = 0;
+    for (const {section, grid, products, more, limit} of sections) {
+      const sorted = order.value === 'name' ? [...products].sort((a,b) => a.title.localeCompare(b.title)) : products;
+      let matches = 0;
+      for (const {product,searchText} of sorted) {
+        const match = terms.every(term => searchText.includes(term)) &&
+          (!material.value || product.dataset.material === material.value) &&
+          (!capacity.value || product.dataset.capacity.split(' ').includes(capacity.value));
+        if (match) matches++;
+        product.hidden = !match || matches > limit;
+        grid.append(product);
+      }
+      more.hidden = matches <= limit;
+      section.hidden = matches === 0;
+      total += matches;
     }
-    section.hidden = visibleCount === 0;
-    total += visibleCount;
+    results.textContent = total ? total + (total === 1 ? ' product' : ' products') : 'No matching products. Try a shorter search or change your filters.';
   }
-  results.textContent = total === 0 ? 'No matching products. Try a shorter search.' : total + (total === 1 ? ' product' : ' products');
-}
-
-searchBox.hidden = false;
-const initialQuery = (new URLSearchParams(location.search).get('q') || '').trim().slice(0, 120);
-search.value = initialQuery;
-document.getElementById('shop-nav-query').value = initialQuery;
-updateResults();
-search.addEventListener('input', updateResults);
-document.querySelectorAll('a[href^="#"], .product-menu a[href^="products.html#"]').forEach(link => link.addEventListener('click', () => {
-  if (search.value) { search.value = ''; updateResults(); }
-}));
-</script>
-<script>
-document.querySelectorAll('.product-menu a[href*="#"]').forEach(link => link.addEventListener('click', event => {
-  const target = document.getElementById(link.hash.slice(1));
-  if (!target) return;
-  event.preventDefault();
-  const menu = document.getElementById('navbarNav');
-  const go = () => { history.pushState(null, '', link.hash); target.scrollIntoView({block:'start'}); };
-  if (menu.classList.contains('show') && window.innerWidth < 1200) {
-    menu.addEventListener('hidden.bs.collapse', go, {once:true});
-    bootstrap.Collapse.getOrCreateInstance(menu, {toggle:false}).hide();
-  } else go();
-}));
+  searchBox.hidden = false;
+  const initial = (new URLSearchParams(location.search).get('q') || '').trim().slice(0,120);
+  search.value = initial;
+  document.querySelector('#shop-nav-query').value = initial;
+  for (const control of [search, material, capacity, order]) control.addEventListener('input', () => {
+    for (const group of sections) group.limit = 8;
+    updateResults();
+  });
+  for (const link of document.querySelectorAll('.subpage-hero a[href^="#"]')) link.addEventListener('click', () => {
+    search.value = material.value = capacity.value = '';
+    updateResults();
+    window.dataLayer?.push({event:'view_item_list',category:link.hash.slice(1)});
+  });
+  updateResults();
+})();
 </script>
 </body>
 </html>
