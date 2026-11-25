@@ -474,7 +474,7 @@
     <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt="Gauri &amp; Sons Group" width="150" height="60"></a>
     <form class="shop-nav-search" action="products.html" method="get" role="search" aria-label="Search catalogue">
       <label class="visually-hidden" for="shop-nav-query">Search laboratory products</label>
-      <input id="shop-nav-query" name="q" type="search" placeholder="Search lab products" required maxlength="120">
+      <input id="shop-nav-query" name="q" type="search" placeholder="Search catalogue" required maxlength="120">
       <button type="submit" aria-label="Search"><i class="ri-search-line" aria-hidden="true"></i></button>
     </form>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -1170,7 +1170,6 @@
                   </div>
                 </div>
               </div>
-              <script>galSliders.push('gallery-galSider')</script>
             </div>
           </div>
         </div>
@@ -1346,9 +1345,10 @@
                 <input id="af6_3" name="af6" type="hidden" value="">
                         <input id="af7_3" name="af7" type="hidden" value="GAURI-SONS">
         <input id="af8_3" name="af8" type="hidden" value="Gauri &amp; Sons Group">
+                <input id="form-name" name="form-name" type="hidden" value="Enquiry Now">
                 <input id="campaignid3" name="campaignid" type="hidden" value="">
                 <div class="btn-wrapper">
-                  <button class="btn btn-dark btn-cta" type="submit">Enquire Now</button>
+                  <button class="btn btn-dark btn-cta" id="enqPopupSumit" type="submit">Enquire Now</button>
                 </div>
                 
               </form>
@@ -1567,7 +1567,6 @@
     window.lazySizesConfig.init = false;
     const lpSliderCount = 5;
     let priceSliders = [];
-    let galSliders = [];
     let isThanksPage = false;
   </script>
 

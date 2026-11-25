@@ -44,11 +44,11 @@
   text-transform: uppercase;
 }
 .gauri-hero h1 {
-  max-width: 12ch;
+  max-width: 15ch;
   margin: 0 0 16px;
   color: #fff;
   font-family: inherit;
-  font-size: clamp(38px, 5.3vw, 79px);
+  font-size: clamp(38px, 4.5vw, 68px);
   font-weight: 720;
   line-height: 1.02;
   letter-spacing: -.055em;
