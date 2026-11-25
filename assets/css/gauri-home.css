@@ -413,3 +413,23 @@ h2 { font-size:clamp(1.5rem,2.7vw,2.25rem); font-weight:780; }
 @media(max-width:680px) {
  .storefront-photo { height:clamp(105px,31vw,165px); }
 }
+
+.hero-slides { display:grid; touch-action:pan-y; }
+.hero-slide { grid-area:1 / 1; visibility:hidden; display:grid; }
+.hero-slide.is-active { visibility:visible; }
+.hero-slide h2 { color:#0b2545; font-size:clamp(2.45rem,4.25vw,3.75rem); font-weight:800; max-width:14ch; line-height:1.08; letter-spacing:-.055em; }
+.hero-controls { border-block:1px solid var(--line); background:#f8fbfe; }
+.hero-control-row { display:flex; align-items:center; justify-content:center; gap:8px; padding-block:6px; }
+.hero-select { display:flex; justify-content:center; flex-wrap:wrap; gap:4px; }
+.hero-control-row button { background:transparent; border:1px solid transparent; border-radius:6px; min-height:44px; padding:4px 10px; color:var(--primary); font-weight:700; font-size:.84rem; }
+.hero-control-row button:is(:hover,[aria-current="true"]) { border-color:#c4d6e8; background:#e8f0f8; }
+.hero-control-row .hero-step { min-width:44px; font-size:1.5rem; line-height:1; }
+@media (prefers-reduced-motion:no-preference) {
+ .hero-slide.is-active { animation:hero-reveal 220ms ease-out; }
+ @keyframes hero-reveal { from { opacity:.2; } to { opacity:1; } }
+}
+@media (max-width:680px) {
+ .hero-slide h2 { font-size:clamp(1.85rem,7.4vw,2.2rem); max-width:24ch; }
+ .hero-select { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); flex:1; }
+ .hero-select button { padding-inline:4px; font-size:.76rem; }
+}

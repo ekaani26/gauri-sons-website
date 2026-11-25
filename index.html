@@ -196,7 +196,9 @@
   </header>
 
   <main id="main-content">
-    <section class="hero" aria-labelledby="home-title">
+    <section class="hero hero-carousel" aria-label="Featured laboratory products" aria-roledescription="carousel">
+      <div class="hero-slides">
+        <div class="hero-slide is-active" role="group" aria-label="Lab Equipment">
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Laboratory equipment &amp; supplies</p>
@@ -210,6 +212,58 @@
           <img src="img/design/hero-desktop.webp" width="1080" height="850" alt="Compound microscope and benchtop centrifuge from the product catalogue" fetchpriority="high">
         </picture>
       </div>
+        </div>
+        <div class="hero-slide" role="group" aria-label="Glassware" inert>
+          <div class="wrap hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Glassware</p>
+              <h2>Glassware for Every Lab Bench</h2>
+              <p>Find beakers, conical flasks and everyday glassware for teaching and research.</p>
+              <div class="actions"><a class="button" href="products.html#glassware">Browse Glassware</a><a class="button secondary" href="#site-visit">Request a Quote</a></div>
+            </div>
+            <picture class="hero-art">
+              <source media="(max-width: 680px)" srcset="img/design/hero-glassware-mobile.webp" width="760" height="620">
+              <img src="img/design/hero-glassware-desktop.webp" width="1080" height="850" alt="Laboratory beaker and conical flask" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+        <div class="hero-slide" role="group" aria-label="Sample storage" inert>
+          <div class="wrap hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Sample storage</p>
+              <h2>Sample Storage for the Laboratory</h2>
+              <p>Explore cryovials and storage boxes. Check tube fit and capacity before requesting a quote.</p>
+              <div class="actions"><a class="button" href="products.html#cryogenic">Browse Sample Storage</a><a class="button secondary" href="#site-visit">Request a Quote</a></div>
+            </div>
+            <picture class="hero-art">
+              <source media="(max-width: 680px)" srcset="img/design/hero-sample-storage-mobile.webp" width="760" height="620">
+              <img src="img/design/hero-sample-storage-desktop.webp" width="1080" height="850" alt="Cryo storage box and external-thread cryovials" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+        <div class="hero-slide" role="group" aria-label="Bench instruments" inert>
+          <div class="wrap hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Bench instruments</p>
+              <h2>Equip Your Laboratory Bench</h2>
+              <p>Find balances and hot plates for routine weighing and heating tasks.</p>
+              <div class="actions"><a class="button" href="products.html#equipment">Browse Lab Equipment</a><a class="button secondary" href="#site-visit">Request a Quote</a></div>
+            </div>
+            <picture class="hero-art">
+              <source media="(max-width: 680px)" srcset="img/design/hero-bench-mobile.webp" width="760" height="620">
+              <img src="img/design/hero-bench-desktop.webp" width="1080" height="850" alt="Laboratory weighing balance and hot plate" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="hero-controls" hidden>
+        <div class="wrap hero-control-row" role="group" aria-label="Choose a banner">
+          <button class="hero-step" type="button" data-hero-step="-1" aria-label="Previous banner">‹</button>
+          <div class="hero-select"><button type="button" aria-label="Show Lab Equipment" aria-current="true">Lab Equipment</button><button type="button" aria-label="Show Glassware">Glassware</button><button type="button" aria-label="Show Sample Storage">Sample Storage</button><button type="button" aria-label="Show Bench Instruments">Bench Instruments</button></div>
+          <button class="hero-step" type="button" data-hero-step="1" aria-label="Next banner">›</button>
+        </div>
+      </div>
+      <p class="sr-only hero-status" role="status"></p>
     </section>
 
     <section class="section wrap" id="amenities" aria-labelledby="category-title">

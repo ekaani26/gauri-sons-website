@@ -228,3 +228,51 @@ cartPanel.querySelector('.quote-with-list').addEventListener('click', () => {
   cartPanel.close();
   form.elements.Phone.focus();
 });
+
+(() => {
+  const carousel = document.querySelector('.hero-carousel');
+  const slides = [...carousel.querySelectorAll('.hero-slide')];
+  const controls = carousel.querySelector('.hero-controls');
+  const selectors = [...controls.querySelectorAll('.hero-select button')];
+  const status = carousel.querySelector('.hero-status');
+  let current = 0;
+  let touchStart;
+
+  function show(index) {
+    const next = (index + slides.length) % slides.length;
+    if (current === next) return;
+    slides[current].inert = true;
+    slides[current].classList.remove('is-active');
+    selectors[current].removeAttribute('aria-current');
+    current = next;
+    slides[current].inert = false;
+    slides[current].classList.add('is-active');
+    selectors[current].setAttribute('aria-current', 'true');
+    status.textContent = `Banner ${current + 1} of ${slides.length}: ${slides[current].getAttribute('aria-label')}`;
+  }
+
+  controls.hidden = false;
+  selectors.forEach((button, index) => button.addEventListener('click', () => show(index)));
+  controls.querySelectorAll('[data-hero-step]').forEach(button => {
+    button.addEventListener('click', () => show(current + Number(button.dataset.heroStep)));
+  });
+  controls.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    show(current + (event.key === 'ArrowLeft' ? -1 : 1));
+    selectors[current].focus();
+  });
+
+  const viewport = carousel.querySelector('.hero-slides');
+  viewport.addEventListener('touchstart', event => {
+    touchStart = event.touches.length === 1 ? event.touches[0] : undefined;
+  }, { passive: true });
+  viewport.addEventListener('touchend', event => {
+    if (!touchStart) return;
+    const end = event.changedTouches[0];
+    const dx = end.clientX - touchStart.clientX;
+    const dy = end.clientY - touchStart.clientY;
+    touchStart = undefined;
+    if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) show(current + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+})();
