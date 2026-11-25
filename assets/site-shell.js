@@ -1,24 +1,6 @@
 window.gauriProducts = Object.freeze({"disposable-pasteur-transfer-pipettes":"Pasteur Transfer Pipettes","sterile-cell-spreaders":"Sterile Cell Spreaders","laboratory-sealing-film":"Laboratory Sealing Film","interlocking-conical-tube-racks":"Click-Together Conical Tube Rack","universal-centrifuge-tube-rack":"Universal Centrifuge Tube Rack","foldable-polypropylene-tube-rack":"Foldable Tube Rack","rpp-microcentrifuge-tube-rack":"RPP Microcentrifuge Tube Rack","polycarbonate-microcentrifuge-tube-rack":"Polycarbonate Microcentrifuge Tube Rack","polypropylene-centrifuge-tube-box":"Centrifuge Tube Box","external-thread-polypropylene-cryovials":"External-Thread Cryovials","single-hand-cryovial-holder-rack":"Single-Hand Cryovial Holder Rack","polycarbonate-cryo-storage-box":"Polycarbonate Cryo Box","100-position-polycarbonate-cryo-box":"100-Position Polycarbonate Cryo Box","polypropylene-cryo-cube-box":"Polypropylene Cryo Cube Box","euro-style-ldpe-dropping-bottles":"Euro-Style Dropping Bottles","ldpe-wash-bottles":"Wash Bottles","one-piece-ldpe-wash-bottles":"Comet Wash Bottles","narrow-mouth-polypropylene-bottles":"Narrow-Mouth PP Bottles","narrow-mouth-ldpe-bottles":"Narrow-Mouth LDPE Bottles","narrow-mouth-hdpe-bottles":"Narrow-Mouth HDPE Bottles","plastic-plain-and-vacuum-desiccators":"Plain & Vacuum Desiccators","laboratory-beakers":"Laboratory Beakers","conical-flasks":"Conical Flasks","volumetric-flasks":"Volumetric Flasks","measuring-cylinders":"Measuring Cylinders","burettes":"Burettes","glass-pipettes":"Glass Pipettes","glass-droppers":"Glass Droppers","petri-dishes":"Petri Dishes","watch-glasses":"Watch Glasses","reagent-bottles":"Reagent Bottles","desiccators":"Desiccators","test-tubes":"Test Tubes","boiling-tubes":"Boiling Tubes","glass-tubing":"Glass Tubing","glass-stirring-rods":"Glass Stirring Rods","laboratory-weighing-balances":"Laboratory Weighing Balances","benchtop-centrifuges":"Benchtop Centrifuges","laboratory-ovens":"Laboratory Ovens","laboratory-water-baths":"Laboratory Water Baths","ph-meters":"pH Meters","laboratory-hot-plates":"Laboratory Hot Plates","magnetic-stirrers":"Magnetic Stirrers","heating-mantles":"Heating Mantles","compound-microscopes":"Compound Microscopes","microscope-objectives":"Microscope Objectives","microscope-slides":"Microscope Slides","cover-slips":"Cover Slips","laboratory-funnels":"Laboratory Funnels","filter-papers":"Filter Papers","filtration-sets":"Filtration Sets","sample-vials":"Sample Vials","wash-bottles":"Wash Bottles","pipette-tips":"Pipette Tips","sample-containers":"Sample Containers","laboratory-labels":"Laboratory Labels","test-tube-racks":"Test Tube Racks","laboratory-support-stands":"Laboratory Support Stands","laboratory-clamps":"Laboratory Clamps","laboratory-safety-goggles":"Laboratory Safety Goggles","laboratory-gloves":"Laboratory Gloves","laboratory-coats":"Laboratory Coats","laboratory-face-masks":"Laboratory Face Masks","polypropylene-freezing-tubes":"Polypropylene Freezing Tubes","polypropylene-storage-vials":"Polypropylene Storage Vials"});
 const siteNav = document.querySelector('#main-nav');
 const siteMenu = document.querySelector('.menu-trigger');
-if (siteNav && siteMenu) {
-  function setMenu(open) {
-    siteNav.classList.toggle('is-open', open);
-    siteMenu.setAttribute('aria-expanded', String(open));
-  }
-  document.body.classList.add('js-nav');
-  siteMenu.addEventListener('click', () => setMenu(!siteNav.classList.contains('is-open')));
-  siteNav.addEventListener('click', event => {
-    if (event.target.closest('a')) setMenu(false);
-  });
-  siteNav.closest('header').addEventListener('keydown', event => {
-    if (event.key === 'Escape' && siteNav.classList.contains('is-open')) {
-      setMenu(false);
-      siteMenu.focus();
-    }
-  });
-}
-
 const quoteLink = document.querySelector('a.cart-trigger');
 if (quoteLink) {
   try {
@@ -34,8 +16,9 @@ if (quoteLink) {
 }
 
 (() => {
-  const makeIcon = name => `<span class="gauri-icon gauri-icon-${name}" aria-hidden="true"></span>`;
+  const makeIcon = name => `<svg class="site-icon" aria-hidden="true" focusable="false"><use href="/img/contact-icons.svg#${name}"></use></svg>`;
   const header = document.querySelector('.site-header');
+  if (!header || !siteNav || !siteMenu) return;
   const utility = header.querySelector('.utility .wrap');
   const service = utility.querySelector('span');
   service.className = 'utility-info';
@@ -45,9 +28,9 @@ if (quoteLink) {
   const searchField = searchForm.querySelector('input');
   searchForm.id = 'site-search';
   searchField.placeholder = 'Search equipment, glassware, consumables…';
-  siteNav.insertAdjacentHTML('beforeend', `<a class="header-whatsapp" href="https://wa.me/918826750844">${makeIcon('chat')} WhatsApp</a>`);
+  siteNav.insertAdjacentHTML('beforeend', `<a class="header-whatsapp" href="https://wa.me/918826750844">${makeIcon('whatsapp')} WhatsApp</a>`);
   const actions = header.querySelector('.header-actions');
-  actions.insertAdjacentHTML('afterbegin', `<button class="mobile-search-trigger cart-trigger" type="button" aria-label="Open product search" aria-controls="site-search" aria-expanded="false">${makeIcon('search')}</button><a class="header-quote-link cart-trigger" href="index.html#site-visit">Request a Quote</a>`);
+  actions.insertAdjacentHTML('afterbegin', `<button class="mobile-search-trigger cart-trigger" type="button" aria-label="Open product search" aria-controls="site-search" aria-expanded="false">${makeIcon('search')}</button><a class="header-quote-link cart-trigger" href="/#site-visit">${makeIcon('quote')} Request a Quote</a>`);
   const searchTrigger = actions.querySelector('.mobile-search-trigger');
   const toggleSearch = open => {
     searchForm.classList.toggle('search-open', open);
@@ -62,7 +45,54 @@ if (quoteLink) {
     }
   });
   document.querySelector('.site-footer .footer-grid').insertAdjacentHTML('beforeend', '<div><strong>Product Categories</strong><a href="products.html#glassware">Glassware</a><a href="products.html#equipment">Lab Equipment</a><a href="products.html#optics">Microscopy</a><a href="products.html#consumables">Consumables</a></div>');
-  document.body.insertAdjacentHTML('beforeend', `<div class="mobile-actions" aria-label="Quick contact"><a class="button secondary" href="tel:+918826750844">${makeIcon('phone')} Call</a><a class="button" href="index.html#site-visit">${makeIcon('list')} Quote</a><a class="button whatsapp" href="https://wa.me/918826750844">${makeIcon('chat')} WhatsApp</a></div><p class="sr-only" id="catalogue-feedback" role="status"></p>`);
+  document.body.insertAdjacentHTML('beforeend', `<div class="mobile-actions" aria-label="Quick contact"><a class="button secondary" href="tel:+918826750844">${makeIcon('phone')} Call</a><a class="button" href="/#site-visit">${makeIcon('quote')} Quote</a><a class="button whatsapp" href="https://wa.me/918826750844">${makeIcon('whatsapp')} WhatsApp</a></div><p class="sr-only" id="catalogue-feedback" role="status"></p>`);
+
+  siteMenu.innerHTML = makeIcon('menu');
+  siteMenu.setAttribute('aria-controls', 'mobile-drawer');
+  siteMenu.setAttribute('aria-haspopup', 'dialog');
+  siteMenu.setAttribute('aria-label', 'Open navigation');
+  header.querySelector('.site-search button').innerHTML = makeIcon('search');
+  const quoteControl = header.querySelector('.cart-trigger:not(.mobile-search-trigger):not(.header-quote-link)');
+  quoteControl.querySelector('.gauri-icon')?.remove();
+  quoteControl.insertAdjacentHTML('afterbegin', makeIcon('quote'));
+  utility.querySelector('a[href^="tel:"]').insertAdjacentHTML('afterbegin', makeIcon('phone'));
+  for (const link of document.querySelectorAll('.quote-copy a[href*="wa.me"], .detail-actions a[href*="wa.me"]')) {
+    link.insertAdjacentHTML('afterbegin', makeIcon('whatsapp') + ' ');
+  }
+  const drawer = document.createElement('dialog');
+  drawer.id = 'mobile-drawer';
+  drawer.setAttribute('aria-label', 'Mobile navigation');
+  drawer.innerHTML = `<div class="drawer-heading"><a href="/" aria-label="Gauri & Sons homepage"><img src="/img/gauri-wordmark.png" width="229" height="57" alt="Gauri &amp; Sons Group"></a><button type="button" aria-label="Close navigation">${makeIcon('close')}</button></div><nav aria-label="Mobile menu"></nav><div class="drawer-contact"><a href="tel:+918826750844">${makeIcon('phone')} Call Gauri &amp; Sons</a></div>`;
+  const menuLinks = drawer.querySelector('nav');
+  for (const link of siteNav.querySelectorAll('a')) menuLinks.append(link.cloneNode(true));
+  document.body.append(drawer);
+  document.body.classList.add('js-nav');
+  const close = drawer.querySelector('button');
+  siteMenu.addEventListener('click', () => {
+    toggleSearch(false);
+    drawer.showModal();
+    siteMenu.setAttribute('aria-expanded', 'true');
+    close.focus();
+  });
+  function closeDrawer() {
+    drawer.close();
+    siteMenu.setAttribute('aria-expanded', 'false');
+  }
+  close.addEventListener('click', closeDrawer);
+  menuLinks.addEventListener('click', event => {
+    if (!event.target.closest('a')) return;
+    closeDrawer();
+  });
+  drawer.addEventListener('click', event => {
+    if (event.target !== drawer) return;
+    const bounds = drawer.getBoundingClientRect();
+    if (event.clientX > bounds.right) closeDrawer();
+  });
+  drawer.addEventListener('close', () => siteMenu.setAttribute('aria-expanded', 'false'));
+  matchMedia('(max-width: 760px)').addEventListener('change', event => {
+    if (!event.matches && drawer.open) closeDrawer();
+    toggleSearch(false);
+  });
 
   const quoteCount = header.querySelector('.storefront-cart-count');
   const feedback = document.querySelector('#catalogue-feedback');
@@ -76,7 +106,7 @@ if (quoteLink) {
       feedback.textContent = `${window.gauriProducts[id]} added to your quote list.`;
       window.dataLayer?.push({event:'add_to_quote', product_id:id, quantity:amount});
     } catch {
-      location.href = `index.html?product=${encodeURIComponent(window.gauriProducts[id])}#site-visit`;
+      location.href = `/?product=${encodeURIComponent(window.gauriProducts[id])}#site-visit`;
     }
   }
   for (const card of document.querySelectorAll('.catalog-product')) {
@@ -104,7 +134,7 @@ if (quoteLink) {
     const whatsapp = document.createElement('a');
     whatsapp.className = 'button secondary';
     whatsapp.href = `https://wa.me/918826750844?text=${encodeURIComponent('Please share a quotation for ' + window.gauriProducts[id])}`;
-    whatsapp.textContent = 'Ask on WhatsApp';
+    whatsapp.innerHTML = makeIcon('whatsapp') + ' Ask on WhatsApp';
     form.append(whatsapp);
     form.addEventListener('submit', e => {
       e.preventDefault();

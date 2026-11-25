@@ -451,3 +451,40 @@ h2 { font-size:clamp(1.5rem,2.7vw,2.25rem); font-weight:780; }
 @media(max-width:680px) {
   .storefront-details { padding:9px; }
 }
+
+.site-icon { display:inline-block; width:1em; height:1em; fill:currentColor; flex:none; vertical-align:-.125em; }
+.utility a .site-icon { margin-inline-end:6px; }
+#mobile-drawer {
+  position:fixed; inset:0 auto 0 0; margin:0;
+  width:min(336px,calc(100% - 40px)); max-width:none;
+  height:100dvh; max-height:none; padding:0;
+  border:0; border-radius:0; overscroll-behavior:contain;
+  background:white;
+}
+body:has(#mobile-drawer[open]) { overflow:hidden; }
+.drawer-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:15px; border-bottom:1px solid var(--line); }
+.drawer-heading img { width:158px; }
+.drawer-heading button { display:grid; place-items:center; min-width:44px; min-height:44px; border:1px solid var(--line); background:white; border-radius:7px; }
+#mobile-drawer nav { height:auto; overflow:visible; display:grid; padding:8px 15px; }
+#mobile-drawer :is(nav,.drawer-contact) a { display:flex; align-items:center; gap:8px; min-height:46px; padding:8px 5px; margin:0; color:var(--ink); font-weight:650; text-decoration:none; border-bottom:1px solid var(--line); }
+.drawer-contact { padding:0 15px; }
+@media (prefers-reduced-motion:no-preference) {
+ #mobile-drawer[open] { animation:gauri-drawer-in .22s ease-out; }
+ @keyframes gauri-drawer-in { from { transform:translateX(-100%); } to { transform:translateX(0); } }
+}
+@media(max-width:760px) {
+ .header-grid { grid-template-columns:minmax(0,1fr) auto; column-gap:6px; }
+ .wordmark img { width:clamp(116px,39vw,164px); }
+ .header-actions { grid-row:1; grid-column:2; gap:2px; }
+ .header-actions :is(.menu-trigger,.cart-trigger) { display:inline-flex; padding:0 5px; gap:3px; min-width:44px; min-height:44px; border-color:transparent; font-size:1rem; }
+ .header-actions .header-quote-link { display:none; }
+ .header-actions .menu-trigger { order:2; }
+ .cart-label { position:absolute; clip-path:inset(50%); width:1px; height:1px; overflow:hidden; }
+ .storefront-cart-count { min-width:18px; min-height:18px; padding:1px 4px; font-size:.72rem; }
+ .site-search { grid-row:2; grid-column:1/-1; padding:0 0 8px; }
+ .js-nav .site-search:not(.search-open), .js-nav #main-nav { display:none; }
+ #main-nav { flex-wrap:wrap; }
+ .utility .utility-info:nth-child(n+2) { display:none; }
+ .utility .wrap { gap:6px; }
+ .utility { font-size:.74rem; }
+}
