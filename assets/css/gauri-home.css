@@ -384,3 +384,100 @@
 .gauri-icon-shield { --gauri-icon-x: 88.235294%; }
 .gauri-icon-box { --gauri-icon-x: 94.117647%; }
 .gauri-icon-menu { --gauri-icon-x: 100.000000%; }
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/dm-sans-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
+/* Compact type and centered content give the portal a lighter rhythm. */
+.gauri-home {
+  --gauri-font: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --gauri-blue: #174378;
+  --gauri-warm: #a84313;
+  --gauri-content: min(1080px, calc(100% - 56px));
+  font-size: .925rem;
+  line-height: 1.55;
+}
+.gauri-home .gauri-wrap,
+.gauri-home .site-menu .container-fluid,
+.gauri-home main > section:not(.gauri-category-band, .gauri-finder-band, .gauri-contact-band),
+.gauri-home .lux2-footer :is(.lux2-disclaimer, .lux2-bottom, .lux2-separator) {
+  width: var(--gauri-content);
+}
+.gauri-home .site-menu .nav-link { font-size: .8rem; font-weight: 500; }
+.gauri-home .gauri-header-quote { font-size: .8rem; padding: 7px 13px; }
+.gauri-home .gauri-service-strip { font-size: .76rem; }
+.gauri-home .gauri-service-strip .gauri-wrap { min-height: 31px; }
+.gauri-home .gauri-hero-grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
+.gauri-home .gauri-hero-copy { padding-block: clamp(23px, 3.2vw, 42px); }
+.gauri-home .gauri-hero :is(h1,.gauri-slide-title) {
+  max-width: 21ch;
+  font-size: clamp(30px, 3.25vw, 48px);
+  font-weight: 680;
+  letter-spacing: -.04em;
+  line-height: 1.09;
+  margin-bottom: 12px;
+}
+.gauri-home .gauri-hero-copy > p:not(.gauri-kicker) { font-size: clamp(.91rem, 1.2vw, 1.04rem); }
+.gauri-home .gauri-kicker { font-size: .74rem; margin-bottom: 10px; }
+.gauri-home .gauri-actions { margin-top: 17px; }
+.gauri-home .gauri-button { min-height: 41px; font-size: .83rem; padding: 7px 12px; }
+.gauri-home .gauri-hero-shortcuts { margin-top: 14px; }
+.gauri-home .gauri-hero-shortcuts a { font-size: .73rem; padding: 5px 8px; }
+.gauri-home .gauri-banner-controls { background: #fff; border-top: 0; border-bottom: 1px solid #e8edf1; }
+.gauri-home .gauri-banner-controls .carousel-indicators { padding: 5px 12px; }
+.gauri-home .gauri-banner-controls .carousel-indicators button {
+  min-height: 30px;
+  padding: 3px 10px;
+  color: #41556a;
+  border-color: transparent;
+  font-size: .76rem;
+}
+.gauri-home .gauri-banner-controls .carousel-indicators button:is(.active,:hover) {
+  background: #edf3fa;
+  color: #154378;
+  border-color: #d8e4f1;
+}
+.gauri-home .gauri-banner-controls button:focus-visible { outline-color: #3479a4; }
+.gauri-home .carousel-fade .carousel-item { transition-duration: .38s; }
+.gauri-home .gauri-category-band { background: #f3f4f5; padding-block: clamp(24px, 3.6vw, 45px); }
+.gauri-home .gauri-category-band h2,
+.gauri-home .gauri-workflow h2,
+.gauri-home .gauri-contact-band h2 { font-size: clamp(23px, 2.2vw, 31px); font-weight: 650; }
+.gauri-home .gauri-feature h2 { font-size: clamp(20px, 2.05vw, 28px); font-weight: 650; }
+.gauri-home .gauri-category-grid a { font-size: .82rem; min-height: 67px; }
+.gauri-home .gauri-audience { max-width: 920px; }
+.gauri-home .gauri-audience article { border-color: #e8edf1; box-shadow: 0 4px 15px rgb(20 44 68 / 4%); }
+.gauri-home .gauri-feature-grid { gap: 13px; margin-top: clamp(26px, 4vw, 50px); }
+.gauri-home .gauri-feature-catalogue { background: #e1f2f5; }
+.gauri-home .gauri-feature-bulk { background: #fbf1e8; }
+.gauri-home .gauri-finder form { background: var(--gauri-warm); }
+.gauri-home .gauri-contact-band { background: #edf4fb; }
+.gauri-home .lux2-footer { background: #153b69; }
+
+@media (min-width: 1200px) {
+  .gauri-home { --nav-height: 84px; }
+}
+@media (max-width: 800px) {
+  .gauri-home { --gauri-content: calc(100% - 32px); }
+}
+@media (max-width: 575px) {
+  .gauri-home .gauri-hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .gauri-home .gauri-hero-copy { padding-block: 22px 8px; }
+  .gauri-home .gauri-hero :is(h1,.gauri-slide-title) { font-size: clamp(28px, 7.8vw, 35px); }
+  .gauri-home .gauri-hero-art { aspect-ratio: 1.95; }
+  .gauri-home .gauri-banner-controls .carousel-indicators button { min-height: 38px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.gauri-home) { scroll-behavior: smooth; }
+  .gauri-home :is(.gauri-category-grid a,.gauri-button,.gauri-banner-controls button,.gauri-header-quote) {
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gauri-home .carousel-fade .carousel-item { transition: none; }
+}
