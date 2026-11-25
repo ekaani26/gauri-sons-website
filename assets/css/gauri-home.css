@@ -433,3 +433,21 @@ h2 { font-size:clamp(1.5rem,2.7vw,2.25rem); font-weight:780; }
  .hero-select { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); flex:1; }
  .hero-select button { padding-inline:4px; font-size:.76rem; }
 }
+
+/* Show the full product up close within a consistent frame. */
+.storefront-card { border-color:#dce6f0; border-radius:10px; }
+.storefront-photo {
+  display:block;
+  height:auto;
+  aspect-ratio:6 / 5;
+  padding:0;
+  background:#fff;
+}
+.storefront-photo img { display:block; width:100%; height:100%; object-fit:contain; }
+.storefront-details { padding:12px 13px 13px; gap:7px; }
+.storefront-details h3 { min-height:0; }
+.storefront-spec { line-height:1.4; }
+.storefront-add { width:100%; align-self:stretch; }
+@media(max-width:680px) {
+  .storefront-details { padding:9px; }
+}
