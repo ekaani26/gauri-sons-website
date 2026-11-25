@@ -280,3 +280,107 @@
   .gauri-steps :is(h3,p) { margin: 0; }
   .gauri-finder { grid-template-columns: 1fr; }
 }
+
+/* Original wordmark treatment, line icons and banner controls. */
+.gauri-home .site-menu .logo.gauri-wordmark {
+  width: clamp(101px, 12vw, 157px);
+  height: auto;
+  object-fit: contain;
+}
+.gauri-home .site-menu .gauri-menu-toggle {
+  display: none;
+  place-items: center;
+  width: 40px;
+  height: 38px;
+  border: 1px solid #cfdae3;
+  border-radius: 6px;
+  color: var(--gauri-navy);
+  font-size: 25px;
+}
+.gauri-home .site-menu .gauri-menu-toggle[aria-expanded="true"] { background: #eaf1f7; }
+.gauri-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  mask: url("../../img/gauri-icons.png") var(--gauri-icon-x) 0 / 1800% 100% no-repeat;
+  vertical-align: -.14em;
+}
+.gauri-hero-shortcuts .gauri-icon { color: var(--gauri-orange); }
+.gauri-category-grid .gauri-icon { color: #2a648a; font-size: 25px; }
+.gauri-steps .gauri-icon, .gauri-finder article .gauri-icon {
+  color: #225273;
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+.gauri-slide-title {
+  max-width: 19ch;
+  margin: 0 0 16px;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(34px, 4vw, 59px);
+  font-weight: 720;
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+.gauri-slide-title span { display: block; color: var(--gauri-orange); }
+.gauri-banner-controls {
+  background: #0b1728;
+  border-top: 1px solid #213751;
+}
+.gauri-banner-controls .carousel-indicators {
+  position: static;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 9px 12px;
+}
+.gauri-banner-controls .carousel-indicators button {
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  min-height: 36px;
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid #48617a;
+  border-radius: 5px;
+  background: transparent;
+  color: #e4edf6;
+  text-indent: 0;
+  opacity: 1;
+  font-size: .8rem;
+}
+.gauri-banner-controls .carousel-indicators .active {
+  background: #e4eef7;
+  color: #122c45;
+  border-color: #e4eef7;
+  font-weight: 700;
+}
+.gauri-banner-controls button:focus-visible { outline-color: #f6b982; }
+@media (max-width: 1199.98px) {
+  .gauri-home .site-menu .gauri-menu-toggle { display: inline-grid; }
+}
+@media (max-width: 575px) {
+  .gauri-home .site-menu .logo.gauri-wordmark { width: 104px; }
+  .gauri-steps .gauri-icon { margin: 0; grid-row: span 2; }
+  .gauri-banner-controls .carousel-indicators button { min-height: 40px; }
+}
+.gauri-icon-phone { --gauri-icon-x: 0.000000%; }
+.gauri-icon-search { --gauri-icon-x: 5.882353%; }
+.gauri-icon-home { --gauri-icon-x: 11.764706%; }
+.gauri-icon-flask { --gauri-icon-x: 17.647059%; }
+.gauri-icon-map { --gauri-icon-x: 23.529412%; }
+.gauri-icon-book { --gauri-icon-x: 29.411765%; }
+.gauri-icon-grid { --gauri-icon-x: 35.294118%; }
+.gauri-icon-image { --gauri-icon-x: 41.176471%; }
+.gauri-icon-list { --gauri-icon-x: 47.058824%; }
+.gauri-icon-chat { --gauri-icon-x: 52.941176%; }
+.gauri-icon-arrow { --gauri-icon-x: 58.823529%; }
+.gauri-icon-scope { --gauri-icon-x: 64.705882%; }
+.gauri-icon-equipment { --gauri-icon-x: 70.588235%; }
+.gauri-icon-drop { --gauri-icon-x: 76.470588%; }
+.gauri-icon-snow { --gauri-icon-x: 82.352941%; }
+.gauri-icon-shield { --gauri-icon-x: 88.235294%; }
+.gauri-icon-box { --gauri-icon-x: 94.117647%; }
+.gauri-icon-menu { --gauri-icon-x: 100.000000%; }
