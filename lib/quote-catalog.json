@@ -107,5 +107,11 @@
   "electronic-pipettes": "Electronic Pipettes",
   "adjustable-fixed-mechanical-pipettes": "Mechanical Pipettes",
   "autoclavable-mechanical-pipettes": "Autoclavable Mechanical Pipettes",
-  "pipette-filler-bulbs": "Three-Valve Pipette Filler Bulbs"
+  "pipette-filler-bulbs": "Three-Valve Pipette Filler Bulbs",
+  "side-arm-filtering-flasks": "Side-Arm Filtering Flasks",
+  "ground-glass-specimen-jars": "Ground-Glass Specimen Jars",
+  "glass-separatory-funnels": "Glass Separatory Funnels",
+  "eggplant-shaped-ground-joint-flasks": "Eggplant-Shaped Ground-Joint Flasks",
+  "pear-shaped-ground-joint-flasks": "Pear-Shaped Ground-Joint Flasks",
+  "glass-laboratory-condensers": "Glass Laboratory Condensers"
 }
