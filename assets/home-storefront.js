@@ -7,15 +7,54 @@ const cards = [...storefront.querySelectorAll('.storefront-card')];
 const resultCount = storefront.querySelector('#storefront-count');
 const loadMore = storefront.querySelector('#load-products');
 const pageSize = 12;
+const sortProducts = document.querySelector('#mobile-product-sort');
+const sheet = document.querySelector('#product-filter-sheet');
+const openSheet = document.querySelector('#open-product-filters');
+const category = document.createElement('select');
+category.add(new Option('All types', ''));
+for (const type of new Set(cards.map(card => card.dataset.storefrontCategory))) category.add(new Option(type,type));
+const sheetInputs = [category, material.cloneNode(true), capacity.cloneNode(true)];
+const sheetLabels = ['Product category / type', 'Material', 'Capacity or tube fit'];
+sheetInputs.forEach((input, i) => {
+  input.removeAttribute('id');
+  const label = document.createElement('label');
+  label.append(sheetLabels[i], input);
+  sheet.querySelector('.sheet-fields').append(label);
+});
+let selectedCategory = '';
+openSheet.addEventListener('click', () => {
+  [category.value, sheetInputs[1].value, sheetInputs[2].value] = [selectedCategory, material.value, capacity.value];
+  sheet.returnValue = '';
+  sheet.showModal();
+});
+document.querySelector('#clear-product-filters').addEventListener('click', () => {
+  for (const input of sheetInputs) input.value = '';
+});
+sheet.addEventListener('close', () => {
+  if (sheet.returnValue !== 'apply') return;
+  [selectedCategory, material.value, capacity.value] = sheetInputs.map(input => input.value);
+  resetPage();
+});
+sortProducts.addEventListener('change', resetPage);
 let limit = pageSize;
 
 function filterProducts() {
   const term = search.value.trim().toLowerCase();
   const matches = cards.filter(card =>
+    (!selectedCategory || card.dataset.storefrontCategory === selectedCategory) &&
     (!material.value || card.dataset.material === material.value) &&
     (!capacity.value || card.dataset.capacity.split(' ').includes(capacity.value)) &&
     (!term || card.querySelector('.storefront-details').textContent.toLowerCase().includes(term))
   );
+  if (sortProducts.value) {
+    const direction = sortProducts.value === 'az' ? 1 : -1;
+    matches.sort((a,b) => direction * a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent));
+    storefront.querySelector('.storefront-grid').append(...matches);
+  } else {
+    storefront.querySelector('.storefront-grid').append(...cards);
+  }
+  const count = [selectedCategory, material.value, capacity.value].filter(Boolean).length;
+  openSheet.textContent = count ? `Filters (${count})` : 'Filters';
   const visible = new Set(matches.slice(0, limit));
   for (const card of cards) {
     card.hidden = !visible.has(card);
@@ -36,6 +75,8 @@ filters.addEventListener('submit', event => event.preventDefault());
 filters.addEventListener('reset', event => {
   event.preventDefault();
   search.value = '';
+  selectedCategory = '';
+  sortProducts.value = '';
   material.value = '';
   capacity.value = '';
   resetPage();
@@ -188,8 +229,8 @@ form.addEventListener('submit', async event => {
   const submit = form.querySelector('button[type="submit"]');
   if (submit.disabled) return;
   const values = Object.fromEntries(new FormData(form));
-  if (!['Phone', 'Name', 'Organisation', 'Product'].every(field => values[field].trim())) {
-    formStatus.textContent = 'Enter your phone, name, organisation and product requirements.';
+  if (!['Phone', 'Name', 'Product'].every(field => values[field].trim())) {
+    formStatus.textContent = 'Enter your phone, name and product requirements.';
     return;
   }
   window.dataLayer?.push({event:'quote_form_submit'});

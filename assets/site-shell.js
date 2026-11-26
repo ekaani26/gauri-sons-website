@@ -29,6 +29,41 @@ if (quoteLink) {
   searchForm.id = 'site-search';
   searchField.placeholder = 'Search equipment, glassware, consumables…';
   siteNav.insertAdjacentHTML('beforeend', `<a class="header-whatsapp" href="https://wa.me/918826750844">${makeIcon('whatsapp')} WhatsApp</a>`);
+  utility.insertAdjacentHTML('afterbegin', '<span class="mobile-announcement">Trusted Laboratory Equipment Supplier in India</span>');
+  const suggestions = document.createElement('ul');
+  suggestions.className = 'search-suggestions';
+  suggestions.setAttribute('aria-label', 'Product suggestions');
+  suggestions.hidden = true;
+  searchForm.after(suggestions);
+  function showSuggestions() {
+    const term = searchField.value.toLowerCase().trim();
+    suggestions.replaceChildren();
+    if (term.length >= 2 && searchForm.classList.contains('search-open')) {
+      for (const [slug, name] of Object.entries(window.gauriProducts).filter(([,name]) => name.toLowerCase().includes(term)).slice(0,5)) {
+        const row = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `/product-${slug}.html`;
+        link.textContent = name;
+        row.append(link);
+        suggestions.append(row);
+      }
+    }
+    suggestions.hidden = !suggestions.children.length;
+  }
+  searchField.addEventListener('input', showSuggestions);
+  for (const nav of document.querySelectorAll('.site-footer .footer-grid nav')) {
+    const title = nav.querySelector('h2');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'mobile-footer-toggle';
+    button.setAttribute('aria-expanded','false');
+    button.textContent = title.textContent;
+    const list = nav.querySelector('ul');
+    list.id = 'footer-links-' + title.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-');
+    button.setAttribute('aria-controls',list.id);
+    title.after(button);
+    button.addEventListener('click', () => button.setAttribute('aria-expanded',String(button.getAttribute('aria-expanded') === 'false')));
+  }
   const actions = header.querySelector('.header-actions');
   actions.insertAdjacentHTML('afterbegin', `<button class="mobile-search-trigger cart-trigger" type="button" aria-label="Open product search" aria-controls="site-search" aria-expanded="false">${makeIcon('search')}</button><a class="header-quote-link cart-trigger" href="/#site-visit">${makeIcon('quote')} Request a Quote</a>`);
   const searchTrigger = actions.querySelector('.mobile-search-trigger');
@@ -36,6 +71,7 @@ if (quoteLink) {
     searchForm.classList.toggle('search-open', open);
     searchTrigger.setAttribute('aria-expanded', String(open));
     if (open) searchField.focus();
+    showSuggestions();
   };
   searchTrigger.addEventListener('click', () => toggleSearch(!searchForm.classList.contains('search-open')));
   header.addEventListener('keydown', e => {
@@ -44,7 +80,7 @@ if (quoteLink) {
       searchTrigger.focus();
     }
   });
-  document.body.insertAdjacentHTML('beforeend', `<div class="mobile-actions" aria-label="Quick contact"><a class="button secondary" href="tel:+918826750844">${makeIcon('phone')} Call</a><a class="button" href="/#site-visit">${makeIcon('quote')} Quote</a><a class="button whatsapp" href="https://wa.me/918826750844">${makeIcon('whatsapp')} WhatsApp</a></div><p class="sr-only" id="catalogue-feedback" role="status"></p>`);
+  document.body.insertAdjacentHTML('beforeend', `<div class="mobile-actions" aria-label="Quick contact"><a class="button secondary" href="tel:+918826750844">${makeIcon('phone')} Call Us</a><a class="button" href="/#site-visit">${makeIcon('quote')} Get Quote</a><a class="button whatsapp" href="https://wa.me/918826750844">${makeIcon('whatsapp')} WhatsApp</a></div><p class="sr-only" id="catalogue-feedback" role="status"></p>`);
 
   siteMenu.innerHTML = makeIcon('menu');
   siteMenu.setAttribute('aria-controls', 'mobile-drawer');
@@ -64,6 +100,11 @@ if (quoteLink) {
   drawer.innerHTML = `<div class="drawer-heading"><a href="/" aria-label="Gauri & Sons homepage"><img src="/img/gauri-wordmark.png" width="229" height="57" alt="Gauri &amp; Sons Group"></a><button type="button" aria-label="Close navigation">${makeIcon('close')}</button></div><nav aria-label="Mobile menu"></nav><div class="drawer-contact"><a href="tel:+918826750844">${makeIcon('phone')} Call Gauri &amp; Sons</a></div>`;
   const menuLinks = drawer.querySelector('nav');
   for (const link of siteNav.querySelectorAll('a')) menuLinks.append(link.cloneNode(true));
+  const categories = document.createElement('details');
+  categories.className = 'drawer-categories';
+  categories.innerHTML = '<summary>Product categories</summary>';
+  for (const link of document.querySelectorAll('.site-footer nav[aria-label="Footer product categories"] a')) categories.append(link.cloneNode(true));
+  menuLinks.append(categories);
   document.body.append(drawer);
   document.body.classList.add('js-nav');
   const close = drawer.querySelector('button');
