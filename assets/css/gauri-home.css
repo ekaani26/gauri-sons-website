@@ -568,3 +568,6 @@ body:has(#mobile-drawer[open]) { overflow:hidden; }
  .hero-slide:first-child .hero-art img { max-height:none; }
  .hero-slide:first-child .hero-art { margin-inline-end:-8px; }
 }
+
+/* Quote-list access is available in the footer and quotation flow. */
+.site-header .header-actions > .cart-trigger:not(.mobile-search-trigger):not(.header-quote-link) { display:none; }
