@@ -44,7 +44,6 @@ if (quoteLink) {
       searchTrigger.focus();
     }
   });
-  document.querySelector('.site-footer .footer-grid').insertAdjacentHTML('beforeend', '<div><strong>Product Categories</strong><a href="products.html#glassware">Glassware</a><a href="products.html#equipment">Lab Equipment</a><a href="products.html#optics">Microscopy</a><a href="products.html#consumables">Consumables</a></div>');
   document.body.insertAdjacentHTML('beforeend', `<div class="mobile-actions" aria-label="Quick contact"><a class="button secondary" href="tel:+918826750844">${makeIcon('phone')} Call</a><a class="button" href="/#site-visit">${makeIcon('quote')} Quote</a><a class="button whatsapp" href="https://wa.me/918826750844">${makeIcon('whatsapp')} WhatsApp</a></div><p class="sr-only" id="catalogue-feedback" role="status"></p>`);
 
   siteMenu.innerHTML = makeIcon('menu');
