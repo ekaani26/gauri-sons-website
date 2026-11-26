@@ -1,1 +1,24 @@
 .blog-page { max-width: 900px; padding-block: 32px 54px; }.blog-page h1 {font-size:clamp(2rem,5vw,3.5rem);margin:12px 0}.blog-page h2 {margin:26px 0 10px}.blog-page p {margin-block:12px}.blog-page picture img {width:100%;border-radius:12px;margin-top:18px}.blog-page .blog-form {margin-top:32px;padding:16px;background:#eaf2f9}.blog-page #quote-form input,.blog-page textarea {min-width:0}.blog-page ul {padding-left:24px}
+.guide-index { max-width:1160px; }
+.guide-intro { background:#edf4fa; padding:clamp(20px,4vw,44px); border-radius:12px; margin-bottom:24px; }
+.guide-intro > p:not(.guide-region) { max-width:58ch; color:#43566b; }
+.blog-page .guide-region { margin:0; color:#24567d; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; font-weight:800; }
+.blog-page .guide-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; padding:0; margin:0; list-style:none; }
+.guide-card { position:relative; display:grid; grid-template-rows:auto 1fr; height:100%; background:#fff; border:1px solid #dce5ef; border-radius:12px; overflow:hidden; }
+.blog-page .guide-card picture img { width:100%; aspect-ratio:1200/630; object-fit:cover; margin:0; border-radius:0; }
+.guide-card-body { display:flex; flex-direction:column; align-items:start; padding:18px; }
+.blog-page .guide-card h2 { margin:6px 0 0; font-size:clamp(1.2rem,2.5vw,1.55rem); }
+.guide-card h2 a { color:#0b2545; text-decoration:none; }
+.guide-card h2 a::after { content:""; position:absolute; inset:0; }
+.guide-card:focus-within { outline:3px solid #2875b2; outline-offset:2px; }
+.guide-card:hover h2 a { text-decoration:underline; }
+.guide-card time { margin-top:auto; color:#43566b; font-size:.85rem; }
+.blog-page > article { max-width:76ch; margin-inline:auto; }
+.blog-page > article > nav { margin-bottom:14px; }
+.blog-page > article > p { line-height:1.68; }
+.blog-page .blog-form { max-width:76ch; margin-inline:auto; border-radius:12px; }
+@media(max-width:680px) {
+ .blog-page { padding-block:22px 34px; }
+ .blog-page .guide-grid { grid-template-columns:minmax(0,1fr); }
+ .blog-page .guide-intro h1 { font-size:clamp(1.8rem,7.4vw,2.1rem); }
+}
